@@ -1,5 +1,6 @@
 ---
 import { config } from '../config';
+import ThemeSwitcher from './ThemeSwitcher.astro';
 ---
 
 <header class="site-header">
@@ -10,14 +11,17 @@ import { config } from '../config';
       </a>
     </div>
     
-    <nav class="main-navigation" role="navigation" aria-label="Main navigation">
-      <ul class="nav-list">
-        <li><a href="/" class="nav-link">Home</a></li>
-        <li><a href="/blog" class="nav-link">Blog</a></li>
-        <li><a href="/about" class="nav-link">About</a></li>
-        <li><a href="/contact" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-controls">
+      <nav class="main-navigation" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/blog" class="nav-link">Blog</a></li>
+          <li><a href="/about" class="nav-link">About</a></li>
+          <li><a href="/contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <ThemeSwitcher />
+    </div>
   </div>
 </header>
 
@@ -51,6 +55,13 @@ import { config } from '../config';
     height: 48px;
     width: auto;
     max-width: 280px;
+  }
+
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--grid-unit) * 3);
+    flex-shrink: 0;
   }
 
   .main-navigation {
