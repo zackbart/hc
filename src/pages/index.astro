@@ -6,54 +6,6 @@ const recentPosts = await Astro.glob('./blog/*.md');
 const sortedPosts = recentPosts
   .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
   .slice(0, 3);
-
-const features = [
-  {
-    title: "Dissonant Harmony",
-    description: "A unique blend of Bauhaus functionalism and monumental design language creating visual tension that captivates and engages.",
-    icon: "⚖️"
-  },
-  {
-    title: "Typography Excellence", 
-    description: "Carefully curated font stack featuring Cormorant Garamond, Playfair Display, and Inter for perfect hierarchical expression.",
-    icon: "🔤"
-  },
-  {
-    title: "Constructivist Grid",
-    description: "Built on an 8-point grid system providing architectural structure and mathematical precision to content layout.",
-    icon: "📐"
-  },
-  {
-    title: "Historical Depth",
-    description: "Every design choice carries historical weight, from color selection to typographic treatment, creating meaningful visual narratives.",
-    icon: "📚"
-  },
-  {
-    title: "Responsive Design",
-    description: "Seamlessly adapts from single-column mobile to sophisticated two-column desktop layout with left sidebar.",
-    icon: "📱"
-  },
-  {
-    title: "Performance First",
-    description: "Self-hosted fonts, optimized CSS, and Astro's zero-JS architecture ensure blazing fast load times.",
-    icon: "⚡"
-  }
-];
-
-const colorPalette = {
-  primary: [
-    { name: "Parchment White", hex: "#f0e9d6", usage: "Backgrounds, code blocks" },
-    { name: "Charcoal Black", hex: "#2c2c2c", usage: "Body text, primary content" },
-    { name: "Muted Red", hex: "#c13127", usage: "Links, active states" },
-    { name: "Deep Blue", hex: "#005a8d", usage: "Blockquotes, secondary accents" },
-    { name: "Ochre Yellow", hex: "#e8a100", usage: "Tags, tertiary accents" }
-  ],
-  secondary: [
-    { name: "Blood Red", hex: "#8b0000", usage: "Headings, monumental elements" },
-    { name: "Stone Beige", hex: "#d4c8a0", usage: "Header, footer backgrounds" },
-    { name: "Steel Gray", hex: "#3d3d3d", usage: "Borders, muted text" }
-  ]
-};
 ---
 
 <Layout title="Volks-Typo: Astro Theme" description="A bold Astro blog theme exploring the aesthetic tension between Bauhaus modernism and monumental design" showSidebar={false}>
@@ -80,114 +32,35 @@ const colorPalette = {
       <div class="container">
         <h2 class="section-title">Design Philosophy</h2>
         <div class="features-grid">
-          {features.map(feature => (
-            <div class="feature-card">
-              <div class="feature-icon">{feature.icon}</div>
-              <h3 class="feature-title">{feature.title}</h3>
-              <p class="feature-description">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Typography Showcase -->
-    <section class="typography-showcase">
-      <div class="container">
-        <h2 class="section-title">Typography Hierarchy</h2>
-        <div class="typography-demo">
-          <div class="type-sample">
-            <h1 class="demo-h1">Primary Heading</h1>
-            <p class="type-meta">Cormorant Garamond • 900 Weight • Blood Red</p>
+          <div class="feature-card">
+            <div class="feature-icon">⚖️</div>
+            <h3 class="feature-title">Dissonant Harmony</h3>
+            <p class="feature-description">A unique blend of Bauhaus functionalism and monumental design language creating visual tension that captivates and engages.</p>
           </div>
-          <div class="type-sample">
-            <h2 class="demo-h2">Secondary Heading</h2>
-            <p class="type-meta">Playfair Display • 900 Weight • Blood Red</p>
+          <div class="feature-card">
+            <div class="feature-icon">🔤</div>
+            <h3 class="feature-title">Typography Excellence</h3>
+            <p class="feature-description">Carefully curated font stack featuring Cormorant Garamond, Playfair Display, and Inter for perfect hierarchical expression.</p>
           </div>
-          <div class="type-sample">
-            <p class="demo-body">Body text represents the Bauhaus principle of clarity and function. Set in Inter with generous line-height for optimal readability across all devices and contexts.</p>
-            <p class="type-meta">Inter • 400 Weight • Charcoal Black</p>
+          <div class="feature-card">
+            <div class="feature-icon">📐</div>
+            <h3 class="feature-title">Constructivist Grid</h3>
+            <p class="feature-description">Built on an 8-point grid system providing architectural structure and mathematical precision to content layout.</p>
           </div>
-          <div class="type-sample">
-            <code class="demo-code">const theme = "volks-typo";</code>
-            <p class="type-meta">JetBrains Mono • Monospace Code</p>
+          <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3 class="feature-title">Historical Depth</h3>
+            <p class="feature-description">Every design choice carries historical weight, from color selection to typographic treatment, creating meaningful visual narratives.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Color Palette -->
-    <section class="color-palette">
-      <div class="container">
-        <h2 class="section-title">Color System</h2>
-        
-        <div class="palette-section">
-          <h3 class="palette-title">Primary Palette (Bauhaus)</h3>
-          <div class="color-grid">
-            {colorPalette.primary.map(color => (
-              <div class="color-card">
-                <div class="color-swatch" style={`background-color: ${color.hex}`}></div>
-                <div class="color-info">
-                  <h4 class="color-name">{color.name}</h4>
-                  <p class="color-hex">{color.hex}</p>
-                  <p class="color-usage">{color.usage}</p>
-                </div>
-              </div>
-            ))}
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3 class="feature-title">Responsive Design</h3>
+            <p class="feature-description">Seamlessly adapts from single-column mobile to sophisticated two-column desktop layout with left sidebar.</p>
           </div>
-        </div>
-
-        <div class="palette-section">
-          <h3 class="palette-title">Secondary Palette (WW2-Era)</h3>
-          <div class="color-grid">
-            {colorPalette.secondary.map(color => (
-              <div class="color-card">
-                <div class="color-swatch" style={`background-color: ${color.hex}`}></div>
-                <div class="color-info">
-                  <h4 class="color-name">{color.name}</h4>
-                  <p class="color-hex">{color.hex}</p>
-                  <p class="color-usage">{color.usage}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Installation Section -->
-    <section class="installation" id="installation">
-      <div class="container">
-        <h2 class="section-title">Quick Start</h2>
-        <div class="install-steps">
-          <div class="step">
-            <h3 class="step-number">01</h3>
-            <h4 class="step-title">Clone Repository</h4>
-            <pre class="code-block"><code>git clone https://github.com/yourusername/volks-typo.git
-cd volks-typo</code></pre>
-          </div>
-          
-          <div class="step">
-            <h3 class="step-number">02</h3>
-            <h4 class="step-title">Install Dependencies</h4>
-            <pre class="code-block"><code>npm install</code></pre>
-          </div>
-          
-          <div class="step">
-            <h3 class="step-number">03</h3>
-            <h4 class="step-title">Configure Theme</h4>
-            <pre class="code-block"><code>// Edit src/config.ts
-export const config = {
-  title: "Your Site Title",
-  author: { name: "Your Name" },
-  // ... customize settings
-}</code></pre>
-          </div>
-          
-          <div class="step">
-            <h3 class="step-number">04</h3>
-            <h4 class="step-title">Start Development</h4>
-            <pre class="code-block"><code>npm run dev</code></pre>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="feature-title">Performance First</h3>
+            <p class="feature-description">Self-hosted fonts, optimized CSS, and Astro zero-JS architecture ensure blazing fast load times.</p>
           </div>
         </div>
       </div>
@@ -235,7 +108,40 @@ export const config = {
         )}
         
         <div class="demo-actions">
-          <a href="/blog" class="btn btn-primary">View Blog →</a>
+          <a href="/blog" class="btn btn-primary">View Blog</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section class="installation" id="installation">
+      <div class="container">
+        <h2 class="section-title">Quick Start</h2>
+        <div class="install-steps">
+          <div class="step">
+            <h3 class="step-number">01</h3>
+            <div class="step-content">
+              <h4 class="step-title">Clone Repository</h4>
+              <pre class="code-block"><code>git clone https://github.com/yourusername/volks-typo.git
+cd volks-typo</code></pre>
+            </div>
+          </div>
+          
+          <div class="step">
+            <h3 class="step-number">02</h3>
+            <div class="step-content">
+              <h4 class="step-title">Install Dependencies</h4>
+              <pre class="code-block"><code>npm install</code></pre>
+            </div>
+          </div>
+          
+          <div class="step">
+            <h3 class="step-number">03</h3>
+            <div class="step-content">
+              <h4 class="step-title">Configure Theme</h4>
+              <pre class="code-block"><code>npm run dev</code></pre>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -253,11 +159,10 @@ export const config = {
     padding: 0 var(--content-padding);
   }
 
-  /* Hero Section */
   .hero {
     text-align: center;
     padding: calc(var(--grid-unit) * 12) 0 calc(var(--grid-unit) * 8);
-    background: linear-gradient(135deg, rgba(212, 200, 160, 0.1) 0%, rgba(240, 233, 214, 0.2) 100%);
+    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-background) 100%);
   }
 
   .hero-content {
@@ -270,7 +175,7 @@ export const config = {
     font-family: var(--font-heading-primary);
     font-size: 4.5rem;
     font-weight: 900;
-    color: var(--color-blood-red);
+    color: var(--color-accent);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 0.9;
@@ -281,7 +186,7 @@ export const config = {
     font-family: var(--font-heading-secondary);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-steel-gray);
+    color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.2em;
     margin-bottom: calc(var(--grid-unit) * 3);
@@ -290,7 +195,7 @@ export const config = {
   .hero-description {
     font-size: 1.375rem;
     line-height: 1.6;
-    color: var(--color-charcoal);
+    color: var(--color-text-primary);
     margin-bottom: calc(var(--grid-unit) * 4);
     max-width: 600px;
     margin-left: auto;
@@ -299,7 +204,7 @@ export const config = {
 
   .hero-rule {
     height: 6px;
-    background-color: var(--color-blood-red);
+    background-color: var(--color-accent);
     border: none;
     width: 150px;
     margin: 0 auto calc(var(--grid-unit) * 4);
@@ -312,7 +217,6 @@ export const config = {
     flex-wrap: wrap;
   }
 
-  /* Button Styles */
   .btn {
     font-family: var(--font-heading-secondary);
     font-weight: 700;
@@ -327,32 +231,31 @@ export const config = {
   }
 
   .btn-primary {
-    background-color: var(--color-blood-red);
+    background-color: var(--color-accent);
     color: white;
-    border: 2px solid var(--color-blood-red);
+    border: 2px solid var(--color-accent);
   }
 
   .btn-primary:hover,
   .btn-primary:focus {
     background-color: transparent;
-    color: var(--color-blood-red);
+    color: var(--color-accent);
     transform: translateY(-2px);
   }
 
   .btn-secondary {
     background-color: transparent;
-    color: var(--color-charcoal);
-    border: 2px solid var(--color-steel-gray);
+    color: var(--color-text-primary);
+    border: 2px solid var(--color-border);
   }
 
   .btn-secondary:hover,
   .btn-secondary:focus {
-    background-color: var(--color-steel-gray);
+    background-color: var(--color-text-primary);
     color: white;
     transform: translateY(-2px);
   }
 
-  /* Features Section */
   .features {
     padding: calc(var(--grid-unit) * 8) 0;
   }
@@ -361,7 +264,7 @@ export const config = {
     font-family: var(--font-heading-secondary);
     font-size: 2.5rem;
     font-weight: 900;
-    color: var(--color-blood-red);
+    color: var(--color-accent);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: calc(var(--grid-unit) * 6);
@@ -375,8 +278,8 @@ export const config = {
   }
 
   .feature-card {
-    background-color: rgba(212, 200, 160, 0.05);
-    border: 1px solid var(--color-steel-gray);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: calc(var(--grid-unit) * 4);
     text-align: center;
@@ -385,7 +288,7 @@ export const config = {
 
   .feature-card:hover {
     transform: translateY(-4px);
-    border-color: var(--color-muted-red);
+    border-color: var(--color-accent);
   }
 
   .feature-icon {
@@ -397,153 +300,109 @@ export const config = {
     font-family: var(--font-heading-secondary);
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--color-blood-red);
+    color: var(--color-accent);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: calc(var(--grid-unit) * 1.5);
   }
 
   .feature-description {
-    color: var(--color-steel-gray);
+    color: var(--color-text-secondary);
     line-height: 1.6;
     margin: 0;
   }
 
-  /* Typography Showcase */
-  .typography-showcase {
+  .demo-section {
     padding: calc(var(--grid-unit) * 8) 0;
-    background-color: rgba(212, 200, 160, 0.05);
   }
 
-  .typography-demo {
-    display: grid;
-    gap: calc(var(--grid-unit) * 6);
-  }
-
-  .type-sample {
+  .demo-description {
     text-align: center;
-  }
-
-  .demo-h1 {
-    font-family: var(--font-heading-primary);
-    font-size: 3rem;
-    font-weight: 900;
-    color: var(--color-blood-red);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: calc(var(--grid-unit));
-  }
-
-  .demo-h2 {
-    font-family: var(--font-heading-secondary);
-    font-size: 2.25rem;
-    font-weight: 900;
-    color: var(--color-blood-red);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: calc(var(--grid-unit));
-  }
-
-  .demo-body {
     font-size: 1.125rem;
-    line-height: 1.7;
-    color: var(--color-charcoal);
-    margin-bottom: calc(var(--grid-unit));
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: calc(var(--grid-unit) * 6);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .demo-code {
-    font-family: var(--font-mono);
-    background-color: var(--color-parchment);
-    border: 1px solid var(--color-steel-gray);
-    padding: calc(var(--grid-unit)) calc(var(--grid-unit) * 1.5);
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: calc(var(--grid-unit));
-  }
-
-  .type-meta {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--color-steel-gray);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin: 0;
-  }
-
-  /* Color Palette */
-  .color-palette {
-    padding: calc(var(--grid-unit) * 8) 0;
-  }
-
-  .palette-section {
+  .demo-posts {
+    display: grid;
+    gap: calc(var(--grid-unit) * 4);
     margin-bottom: calc(var(--grid-unit) * 6);
   }
 
-  .palette-title {
+  .demo-post-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: calc(var(--grid-unit) * 3);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .demo-post-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-accent);
+  }
+
+  .demo-post-title {
     font-family: var(--font-heading-secondary);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-charcoal);
+    margin-bottom: calc(var(--grid-unit));
+  }
+
+  .demo-post-title a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+  }
+
+  .demo-post-title a:hover,
+  .demo-post-title a:focus {
+    color: var(--color-accent);
+  }
+
+  .demo-post-date {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: calc(var(--grid-unit) * 3);
+    display: block;
+    margin-bottom: calc(var(--grid-unit) * 1.5);
+  }
+
+  .demo-post-excerpt {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: calc(var(--grid-unit) * 2);
+  }
+
+  .demo-post-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--grid-unit) / 2);
+  }
+
+  .demo-category {
+    background-color: var(--color-text-primary);
+    color: white;
+    padding: calc(var(--grid-unit) / 4) calc(var(--grid-unit) / 2);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 2px;
+  }
+
+  .demo-actions {
     text-align: center;
   }
 
-  .color-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: calc(var(--grid-unit) * 3);
-  }
-
-  .color-card {
-    border: 1px solid var(--color-steel-gray);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.2s ease;
-  }
-
-  .color-card:hover {
-    transform: translateY(-2px);
-  }
-
-  .color-swatch {
-    height: 80px;
-    width: 100%;
-  }
-
-  .color-info {
-    padding: calc(var(--grid-unit) * 1.5);
-  }
-
-  .color-name {
-    font-family: var(--font-heading-secondary);
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--color-charcoal);
-    margin-bottom: calc(var(--grid-unit) / 2);
-  }
-
-  .color-hex {
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
-    color: var(--color-steel-gray);
-    margin-bottom: calc(var(--grid-unit) / 2);
-  }
-
-  .color-usage {
-    font-size: 0.85rem;
-    color: var(--color-steel-gray);
-    margin: 0;
-  }
-
-  /* Installation Section */
   .installation {
     padding: calc(var(--grid-unit) * 8) 0;
-    background-color: rgba(212, 200, 160, 0.05);
+    background-color: var(--color-surface);
   }
 
   .install-steps {
@@ -562,7 +421,7 @@ export const config = {
     font-family: var(--font-heading-primary);
     font-size: 3rem;
     font-weight: 900;
-    color: var(--color-blood-red);
+    color: var(--color-accent);
     margin: 0;
   }
 
@@ -575,15 +434,15 @@ export const config = {
     font-family: var(--font-heading-secondary);
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--color-charcoal);
+    color: var(--color-text-primary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: calc(var(--grid-unit));
   }
 
   .code-block {
-    background-color: var(--color-charcoal);
-    color: var(--color-parchment);
+    background-color: var(--color-text-primary);
+    color: var(--color-background);
     padding: calc(var(--grid-unit) * 2);
     border-radius: 8px;
     overflow-x: auto;
@@ -597,96 +456,6 @@ export const config = {
     color: inherit;
   }
 
-  /* Demo Section */
-  .demo-section {
-    padding: calc(var(--grid-unit) * 8) 0;
-  }
-
-  .demo-description {
-    text-align: center;
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: var(--color-steel-gray);
-    margin-bottom: calc(var(--grid-unit) * 6);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .demo-posts {
-    display: grid;
-    gap: calc(var(--grid-unit) * 4);
-    margin-bottom: calc(var(--grid-unit) * 6);
-  }
-
-  .demo-post-card {
-    background-color: rgba(212, 200, 160, 0.05);
-    border: 1px solid var(--color-steel-gray);
-    border-radius: 8px;
-    padding: calc(var(--grid-unit) * 3);
-    transition: transform 0.2s ease, border-color 0.2s ease;
-  }
-
-  .demo-post-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--color-muted-red);
-  }
-
-  .demo-post-title {
-    font-family: var(--font-heading-secondary);
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: calc(var(--grid-unit));
-  }
-
-  .demo-post-title a {
-    color: var(--color-charcoal);
-    text-decoration: none;
-  }
-
-  .demo-post-title a:hover,
-  .demo-post-title a:focus {
-    color: var(--color-muted-red);
-  }
-
-  .demo-post-date {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--color-steel-gray);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    display: block;
-    margin-bottom: calc(var(--grid-unit) * 1.5);
-  }
-
-  .demo-post-excerpt {
-    color: var(--color-steel-gray);
-    line-height: 1.6;
-    margin-bottom: calc(var(--grid-unit) * 2);
-  }
-
-  .demo-post-categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: calc(var(--grid-unit) / 2);
-  }
-
-  .demo-category {
-    background-color: var(--color-deep-blue);
-    color: white;
-    padding: calc(var(--grid-unit) / 4) calc(var(--grid-unit) / 2);
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-radius: 2px;
-  }
-
-  .demo-actions {
-    text-align: center;
-  }
-
-  /* Responsive Design */
   @media (max-width: 768px) {
     .hero-title {
       font-size: 3rem;
@@ -716,10 +485,6 @@ export const config = {
 
     .step-number {
       font-size: 2rem;
-    }
-
-    .color-grid {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
   }
 </style>

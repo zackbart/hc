@@ -73,7 +73,7 @@ const sortedPosts = allPosts
     font-family: var(--font-heading-primary);
     font-size: 3.5rem;
     font-weight: 900;
-    color: var(--color-blood-red);
+    color: var(--color-accent);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 1.1;
@@ -83,7 +83,7 @@ const sortedPosts = allPosts
   .blog-description {
     font-size: 1.25rem;
     line-height: 1.6;
-    color: var(--color-steel-gray);
+    color: var(--color-text-secondary);
     margin-bottom: calc(var(--grid-unit) * 4);
     max-width: 600px;
     margin-left: auto;
@@ -92,7 +92,7 @@ const sortedPosts = allPosts
 
   .blog-rule {
     height: 4px;
-    background-color: var(--color-blood-red);
+    background-color: var(--color-accent);
     border: none;
     width: 120px;
     margin: 0 auto;
@@ -105,7 +105,7 @@ const sortedPosts = allPosts
   }
 
   .post-item {
-    border-bottom: 1px solid var(--color-steel-gray);
+    border-bottom: 1px solid var(--color-border);
     padding-bottom: calc(var(--grid-unit) * 4);
   }
 
@@ -122,14 +122,14 @@ const sortedPosts = allPosts
   }
 
   .post-title a {
-    color: var(--color-charcoal);
+    color: var(--color-text-primary);
     text-decoration: none;
     transition: color 0.2s ease;
   }
 
   .post-title a:hover,
   .post-title a:focus {
-    color: var(--color-muted-red);
+    color: var(--color-accent);
   }
 
   .post-meta {
@@ -142,7 +142,7 @@ const sortedPosts = allPosts
   .post-date {
     font-family: var(--font-mono);
     font-size: 0.9rem;
-    color: var(--color-steel-gray);
+    color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -154,7 +154,7 @@ const sortedPosts = allPosts
   }
 
   .category {
-    background-color: var(--color-deep-blue);
+    background-color: var(--color-text-primary);
     color: white;
     padding: calc(var(--grid-unit) / 4) calc(var(--grid-unit) / 2);
     font-size: 0.75rem;
@@ -165,7 +165,7 @@ const sortedPosts = allPosts
   }
 
   .post-excerpt {
-    color: var(--color-steel-gray);
+    color: var(--color-text-secondary);
     line-height: 1.6;
     margin-bottom: calc(var(--grid-unit) * 2);
     font-size: 1.1rem;
@@ -176,7 +176,7 @@ const sortedPosts = allPosts
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--color-muted-red);
+    color: var(--color-accent);
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.2s ease;
@@ -184,18 +184,18 @@ const sortedPosts = allPosts
 
   .read-more:hover,
   .read-more:focus {
-    color: var(--color-blood-red);
+    color: var(--color-text-primary);
   }
 
   .no-posts {
     text-align: center;
     padding: calc(var(--grid-unit) * 6);
-    color: var(--color-steel-gray);
+    color: var(--color-text-muted);
     font-style: italic;
   }
 
   .no-posts code {
-    background-color: var(--color-parchment);
+    background-color: var(--color-surface);
     padding: 2px 4px;
     border-radius: 3px;
     font-family: var(--font-mono);
