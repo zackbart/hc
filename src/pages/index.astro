@@ -6,86 +6,291 @@ const recentPosts = await Astro.glob('./blog/*.md');
 const sortedPosts = recentPosts
   .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
   .slice(0, 3);
+
+const features = [
+  {
+    title: "Dissonant Harmony",
+    description: "A unique blend of Bauhaus functionalism and monumental design language creating visual tension that captivates and engages.",
+    icon: "⚖️"
+  },
+  {
+    title: "Typography Excellence", 
+    description: "Carefully curated font stack featuring Cormorant Garamond, Playfair Display, and Inter for perfect hierarchical expression.",
+    icon: "🔤"
+  },
+  {
+    title: "Constructivist Grid",
+    description: "Built on an 8-point grid system providing architectural structure and mathematical precision to content layout.",
+    icon: "📐"
+  },
+  {
+    title: "Historical Depth",
+    description: "Every design choice carries historical weight, from color selection to typographic treatment, creating meaningful visual narratives.",
+    icon: "📚"
+  },
+  {
+    title: "Responsive Design",
+    description: "Seamlessly adapts from single-column mobile to sophisticated two-column desktop layout with left sidebar.",
+    icon: "📱"
+  },
+  {
+    title: "Performance First",
+    description: "Self-hosted fonts, optimized CSS, and Astro's zero-JS architecture ensure blazing fast load times.",
+    icon: "⚡"
+  }
+];
+
+const colorPalette = {
+  primary: [
+    { name: "Parchment White", hex: "#f0e9d6", usage: "Backgrounds, code blocks" },
+    { name: "Charcoal Black", hex: "#2c2c2c", usage: "Body text, primary content" },
+    { name: "Muted Red", hex: "#c13127", usage: "Links, active states" },
+    { name: "Deep Blue", hex: "#005a8d", usage: "Blockquotes, secondary accents" },
+    { name: "Ochre Yellow", hex: "#e8a100", usage: "Tags, tertiary accents" }
+  ],
+  secondary: [
+    { name: "Blood Red", hex: "#8b0000", usage: "Headings, monumental elements" },
+    { name: "Stone Beige", hex: "#d4c8a0", usage: "Header, footer backgrounds" },
+    { name: "Steel Gray", hex: "#3d3d3d", usage: "Borders, muted text" }
+  ]
+};
 ---
 
-<Layout title={config.title} description={config.description}>
-  <div class="home-page">
+<Layout title="Volks-Typo: Astro Theme" description="A bold Astro blog theme exploring the aesthetic tension between Bauhaus modernism and monumental design" showSidebar={false}>
+  <div class="landing-page">
+    <!-- Hero Section -->
     <section class="hero">
-      <h1 class="hero-title">Welcome to {config.title}</h1>
-      <p class="hero-description">{config.description}</p>
-      <hr class="hero-rule" />
+      <div class="hero-content">
+        <h1 class="hero-title">Volks-Typo</h1>
+        <p class="hero-subtitle">Astro Blog Theme</p>
+        <p class="hero-description">
+          A bold exploration of aesthetic tension between Bauhaus functionalism and monumental design language.
+          Where clean modernism meets historical gravitas.
+        </p>
+        <hr class="hero-rule" />
+        <div class="hero-actions">
+          <a href="#demo" class="btn btn-primary">View Demo</a>
+          <a href="#installation" class="btn btn-secondary">Get Started</a>
+        </div>
+      </div>
     </section>
 
-    <section class="recent-posts">
-      <h2 class="section-title">Recent Posts</h2>
-      
-      {sortedPosts.length > 0 ? (
-        <div class="posts-grid">
-          {sortedPosts.map(post => (
-            <article class="post-card">
-              <h3 class="post-title">
-                <a href={post.url}>{post.frontmatter.title}</a>
-              </h3>
-              
-              <time class="post-date" datetime={post.frontmatter.date}>
-                {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}
-              </time>
-              
-              {post.frontmatter.excerpt && (
-                <p class="post-excerpt">{post.frontmatter.excerpt}</p>
-              )}
-              
-              {post.frontmatter.categories && (
-                <div class="post-categories">
-                  {post.frontmatter.categories.map((category) => (
-                    <span class="category">{category}</span>
-                  ))}
-                </div>
-              )}
-            </article>
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">Design Philosophy</h2>
+        <div class="features-grid">
+          {features.map(feature => (
+            <div class="feature-card">
+              <div class="feature-icon">{feature.icon}</div>
+              <h3 class="feature-title">{feature.title}</h3>
+              <p class="feature-description">{feature.description}</p>
+            </div>
           ))}
         </div>
-      ) : (
-        <p class="no-posts">No posts available yet. Create your first post in <code>src/pages/blog/</code></p>
-      )}
-      
-      <div class="view-all">
-        <a href="/blog" class="view-all-link">View All Posts →</a>
+      </div>
+    </section>
+
+    <!-- Typography Showcase -->
+    <section class="typography-showcase">
+      <div class="container">
+        <h2 class="section-title">Typography Hierarchy</h2>
+        <div class="typography-demo">
+          <div class="type-sample">
+            <h1 class="demo-h1">Primary Heading</h1>
+            <p class="type-meta">Cormorant Garamond • 900 Weight • Blood Red</p>
+          </div>
+          <div class="type-sample">
+            <h2 class="demo-h2">Secondary Heading</h2>
+            <p class="type-meta">Playfair Display • 900 Weight • Blood Red</p>
+          </div>
+          <div class="type-sample">
+            <p class="demo-body">Body text represents the Bauhaus principle of clarity and function. Set in Inter with generous line-height for optimal readability across all devices and contexts.</p>
+            <p class="type-meta">Inter • 400 Weight • Charcoal Black</p>
+          </div>
+          <div class="type-sample">
+            <code class="demo-code">const theme = "volks-typo";</code>
+            <p class="type-meta">JetBrains Mono • Monospace Code</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Color Palette -->
+    <section class="color-palette">
+      <div class="container">
+        <h2 class="section-title">Color System</h2>
+        
+        <div class="palette-section">
+          <h3 class="palette-title">Primary Palette (Bauhaus)</h3>
+          <div class="color-grid">
+            {colorPalette.primary.map(color => (
+              <div class="color-card">
+                <div class="color-swatch" style={`background-color: ${color.hex}`}></div>
+                <div class="color-info">
+                  <h4 class="color-name">{color.name}</h4>
+                  <p class="color-hex">{color.hex}</p>
+                  <p class="color-usage">{color.usage}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="palette-section">
+          <h3 class="palette-title">Secondary Palette (WW2-Era)</h3>
+          <div class="color-grid">
+            {colorPalette.secondary.map(color => (
+              <div class="color-card">
+                <div class="color-swatch" style={`background-color: ${color.hex}`}></div>
+                <div class="color-info">
+                  <h4 class="color-name">{color.name}</h4>
+                  <p class="color-hex">{color.hex}</p>
+                  <p class="color-usage">{color.usage}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section class="installation" id="installation">
+      <div class="container">
+        <h2 class="section-title">Quick Start</h2>
+        <div class="install-steps">
+          <div class="step">
+            <h3 class="step-number">01</h3>
+            <h4 class="step-title">Clone Repository</h4>
+            <pre class="code-block"><code>git clone https://github.com/yourusername/volks-typo.git
+cd volks-typo</code></pre>
+          </div>
+          
+          <div class="step">
+            <h3 class="step-number">02</h3>
+            <h4 class="step-title">Install Dependencies</h4>
+            <pre class="code-block"><code>npm install</code></pre>
+          </div>
+          
+          <div class="step">
+            <h3 class="step-number">03</h3>
+            <h4 class="step-title">Configure Theme</h4>
+            <pre class="code-block"><code>// Edit src/config.ts
+export const config = {
+  title: "Your Site Title",
+  author: { name: "Your Name" },
+  // ... customize settings
+}</code></pre>
+          </div>
+          
+          <div class="step">
+            <h3 class="step-number">04</h3>
+            <h4 class="step-title">Start Development</h4>
+            <pre class="code-block"><code>npm run dev</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section" id="demo">
+      <div class="container">
+        <h2 class="section-title">Live Demo</h2>
+        <p class="demo-description">
+          See the theme in action with sample blog posts that demonstrate all typography, 
+          layout, and design elements working together in perfect dissonant harmony.
+        </p>
+        
+        {sortedPosts.length > 0 && (
+          <div class="demo-posts">
+            {sortedPosts.map(post => (
+              <article class="demo-post-card">
+                <h3 class="demo-post-title">
+                  <a href={post.url}>{post.frontmatter.title}</a>
+                </h3>
+                
+                <time class="demo-post-date" datetime={post.frontmatter.date}>
+                  {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
+                </time>
+                
+                {post.frontmatter.excerpt && (
+                  <p class="demo-post-excerpt">{post.frontmatter.excerpt}</p>
+                )}
+                
+                {post.frontmatter.categories && (
+                  <div class="demo-post-categories">
+                    {post.frontmatter.categories.map((category) => (
+                      <span class="demo-category">{category}</span>
+                    ))}
+                  </div>
+                )}
+              </article>
+            ))}
+          </div>
+        )}
+        
+        <div class="demo-actions">
+          <a href="/blog" class="btn btn-primary">View Blog →</a>
+        </div>
       </div>
     </section>
   </div>
 </Layout>
 
 <style>
-  .home-page {
-    max-width: 800px;
-    margin: 0 auto;
+  .landing-page {
+    width: 100%;
   }
 
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+  }
+
+  /* Hero Section */
   .hero {
     text-align: center;
-    margin-bottom: calc(var(--grid-unit) * 8);
+    padding: calc(var(--grid-unit) * 12) 0 calc(var(--grid-unit) * 8);
+    background: linear-gradient(135deg, rgba(212, 200, 160, 0.1) 0%, rgba(240, 233, 214, 0.2) 100%);
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
   }
 
   .hero-title {
     font-family: var(--font-heading-primary);
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: 900;
     color: var(--color-blood-red);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    line-height: 1.1;
+    line-height: 0.9;
+    margin-bottom: calc(var(--grid-unit) * 2);
+  }
+
+  .hero-subtitle {
+    font-family: var(--font-heading-secondary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-steel-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
     margin-bottom: calc(var(--grid-unit) * 3);
   }
 
   .hero-description {
-    font-size: 1.25rem;
+    font-size: 1.375rem;
     line-height: 1.6;
-    color: var(--color-steel-gray);
+    color: var(--color-charcoal);
     margin-bottom: calc(var(--grid-unit) * 4);
     max-width: 600px;
     margin-left: auto;
@@ -93,61 +298,358 @@ const sortedPosts = recentPosts
   }
 
   .hero-rule {
-    height: 4px;
+    height: 6px;
     background-color: var(--color-blood-red);
     border: none;
-    width: 120px;
-    margin: 0 auto;
+    width: 150px;
+    margin: 0 auto calc(var(--grid-unit) * 4);
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: calc(var(--grid-unit) * 2);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Button Styles */
+  .btn {
+    font-family: var(--font-heading-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: calc(var(--grid-unit) * 1.5) calc(var(--grid-unit) * 3);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    background-color: var(--color-blood-red);
+    color: white;
+    border: 2px solid var(--color-blood-red);
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: transparent;
+    color: var(--color-blood-red);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--color-charcoal);
+    border: 2px solid var(--color-steel-gray);
+  }
+
+  .btn-secondary:hover,
+  .btn-secondary:focus {
+    background-color: var(--color-steel-gray);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  /* Features Section */
+  .features {
+    padding: calc(var(--grid-unit) * 8) 0;
   }
 
   .section-title {
     font-family: var(--font-heading-secondary);
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 900;
     color: var(--color-blood-red);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin-bottom: calc(var(--grid-unit) * 4);
+    margin-bottom: calc(var(--grid-unit) * 6);
     text-align: center;
   }
 
-  .posts-grid {
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: calc(var(--grid-unit) * 4);
+  }
+
+  .feature-card {
+    background-color: rgba(212, 200, 160, 0.05);
+    border: 1px solid var(--color-steel-gray);
+    border-radius: 8px;
+    padding: calc(var(--grid-unit) * 4);
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-muted-red);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: calc(var(--grid-unit) * 2);
+  }
+
+  .feature-title {
+    font-family: var(--font-heading-secondary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-blood-red);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: calc(var(--grid-unit) * 1.5);
+  }
+
+  .feature-description {
+    color: var(--color-steel-gray);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Typography Showcase */
+  .typography-showcase {
+    padding: calc(var(--grid-unit) * 8) 0;
+    background-color: rgba(212, 200, 160, 0.05);
+  }
+
+  .typography-demo {
+    display: grid;
+    gap: calc(var(--grid-unit) * 6);
+  }
+
+  .type-sample {
+    text-align: center;
+  }
+
+  .demo-h1 {
+    font-family: var(--font-heading-primary);
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--color-blood-red);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: calc(var(--grid-unit));
+  }
+
+  .demo-h2 {
+    font-family: var(--font-heading-secondary);
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: var(--color-blood-red);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: calc(var(--grid-unit));
+  }
+
+  .demo-body {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-charcoal);
+    margin-bottom: calc(var(--grid-unit));
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .demo-code {
+    font-family: var(--font-mono);
+    background-color: var(--color-parchment);
+    border: 1px solid var(--color-steel-gray);
+    padding: calc(var(--grid-unit)) calc(var(--grid-unit) * 1.5);
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: calc(var(--grid-unit));
+  }
+
+  .type-meta {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-steel-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+
+  /* Color Palette */
+  .color-palette {
+    padding: calc(var(--grid-unit) * 8) 0;
+  }
+
+  .palette-section {
+    margin-bottom: calc(var(--grid-unit) * 6);
+  }
+
+  .palette-title {
+    font-family: var(--font-heading-secondary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-charcoal);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: calc(var(--grid-unit) * 3);
+    text-align: center;
+  }
+
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: calc(var(--grid-unit) * 3);
+  }
+
+  .color-card {
+    border: 1px solid var(--color-steel-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+
+  .color-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .color-swatch {
+    height: 80px;
+    width: 100%;
+  }
+
+  .color-info {
+    padding: calc(var(--grid-unit) * 1.5);
+  }
+
+  .color-name {
+    font-family: var(--font-heading-secondary);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: calc(var(--grid-unit) / 2);
+  }
+
+  .color-hex {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-steel-gray);
+    margin-bottom: calc(var(--grid-unit) / 2);
+  }
+
+  .color-usage {
+    font-size: 0.85rem;
+    color: var(--color-steel-gray);
+    margin: 0;
+  }
+
+  /* Installation Section */
+  .installation {
+    padding: calc(var(--grid-unit) * 8) 0;
+    background-color: rgba(212, 200, 160, 0.05);
+  }
+
+  .install-steps {
+    display: grid;
+    gap: calc(var(--grid-unit) * 4);
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: calc(var(--grid-unit) * 2);
+    align-items: start;
+  }
+
+  .step-number {
+    font-family: var(--font-heading-primary);
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--color-blood-red);
+    margin: 0;
+  }
+
+  .step-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .step-title {
+    font-family: var(--font-heading-secondary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-charcoal);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: calc(var(--grid-unit));
+  }
+
+  .code-block {
+    background-color: var(--color-charcoal);
+    color: var(--color-parchment);
+    padding: calc(var(--grid-unit) * 2);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 0;
+  }
+
+  .code-block code {
+    font-family: var(--font-mono);
+    background: none;
+    border: none;
+    color: inherit;
+  }
+
+  /* Demo Section */
+  .demo-section {
+    padding: calc(var(--grid-unit) * 8) 0;
+  }
+
+  .demo-description {
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-steel-gray);
+    margin-bottom: calc(var(--grid-unit) * 6);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .demo-posts {
     display: grid;
     gap: calc(var(--grid-unit) * 4);
     margin-bottom: calc(var(--grid-unit) * 6);
   }
 
-  .post-card {
+  .demo-post-card {
     background-color: rgba(212, 200, 160, 0.05);
     border: 1px solid var(--color-steel-gray);
-    border-radius: 4px;
+    border-radius: 8px;
     padding: calc(var(--grid-unit) * 3);
     transition: transform 0.2s ease, border-color 0.2s ease;
   }
 
-  .post-card:hover {
+  .demo-post-card:hover {
     transform: translateY(-2px);
     border-color: var(--color-muted-red);
   }
 
-  .post-title {
+  .demo-post-title {
     font-family: var(--font-heading-secondary);
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: calc(var(--grid-unit));
   }
 
-  .post-title a {
+  .demo-post-title a {
     color: var(--color-charcoal);
     text-decoration: none;
   }
 
-  .post-title a:hover,
-  .post-title a:focus {
+  .demo-post-title a:hover,
+  .demo-post-title a:focus {
     color: var(--color-muted-red);
   }
 
-  .post-date {
+  .demo-post-date {
     font-family: var(--font-mono);
     font-size: 0.85rem;
     color: var(--color-steel-gray);
@@ -157,19 +659,19 @@ const sortedPosts = recentPosts
     margin-bottom: calc(var(--grid-unit) * 1.5);
   }
 
-  .post-excerpt {
+  .demo-post-excerpt {
     color: var(--color-steel-gray);
     line-height: 1.6;
     margin-bottom: calc(var(--grid-unit) * 2);
   }
 
-  .post-categories {
+  .demo-post-categories {
     display: flex;
     flex-wrap: wrap;
     gap: calc(var(--grid-unit) / 2);
   }
 
-  .category {
+  .demo-category {
     background-color: var(--color-deep-blue);
     color: white;
     padding: calc(var(--grid-unit) / 4) calc(var(--grid-unit) / 2);
@@ -180,55 +682,44 @@ const sortedPosts = recentPosts
     border-radius: 2px;
   }
 
-  .no-posts {
-    text-align: center;
-    color: var(--color-steel-gray);
-    font-style: italic;
-    padding: calc(var(--grid-unit) * 4);
-  }
-
-  .no-posts code {
-    background-color: var(--color-parchment);
-    padding: 2px 4px;
-    border-radius: 3px;
-    font-family: var(--font-mono);
-  }
-
-  .view-all {
+  .demo-actions {
     text-align: center;
   }
 
-  .view-all-link {
-    font-family: var(--font-heading-secondary);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-muted-red);
-    padding: calc(var(--grid-unit)) calc(var(--grid-unit) * 2);
-    border: 2px solid var(--color-muted-red);
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    display: inline-block;
-  }
-
-  .view-all-link:hover,
-  .view-all-link:focus {
-    background-color: var(--color-muted-red);
-    color: white;
-    text-decoration: none;
-  }
-
+  /* Responsive Design */
   @media (max-width: 768px) {
     .hero-title {
-      font-size: 2.5rem;
+      font-size: 3rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
     }
 
     .hero-description {
       font-size: 1.125rem;
     }
 
-    .post-card {
-      padding: calc(var(--grid-unit) * 2);
+    .hero-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .step {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .step-number {
+      font-size: 2rem;
+    }
+
+    .color-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
   }
 </style>
