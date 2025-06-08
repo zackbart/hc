@@ -1,0 +1,187 @@
+/* Volks-Typo Global Styles */
+
+/* Color Variables */
+:root {
+  /* Primary Palette (Bauhaus) */
+  --color-parchment: #f0e9d6;
+  --color-charcoal: #2c2c2c;
+  --color-muted-red: #c13127;
+  --color-deep-blue: #005a8d;
+  --color-ochre: #e8a100;
+  
+  /* Secondary Palette (WW2-Era) */
+  --color-blood-red: #8b0000;
+  --color-stone-beige: #d4c8a0;
+  --color-steel-gray: #3d3d3d;
+  
+  /* Typography */
+  --font-heading-primary: 'Cormorant Garamond', serif;
+  --font-heading-secondary: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Layout */
+  --grid-unit: 8px;
+  --max-width: 1200px;
+  --sidebar-width: 320px;
+  --content-padding: calc(var(--grid-unit) * 3);
+}
+
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-charcoal);
+  background-color: var(--color-parchment);
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-blood-red);
+  margin-bottom: calc(var(--grid-unit) * 2);
+}
+
+h1 {
+  font-family: var(--font-heading-primary);
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: calc(var(--grid-unit) * 4);
+}
+
+h2 {
+  font-family: var(--font-heading-secondary);
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-family: var(--font-heading-secondary);
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+p {
+  margin-bottom: calc(var(--grid-unit) * 2);
+  font-size: 1.125rem;
+}
+
+/* Links */
+a {
+  color: var(--color-muted-red);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-blood-red);
+  text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: calc(var(--grid-unit) * 2);
+  padding-left: calc(var(--grid-unit) * 3);
+}
+
+li {
+  margin-bottom: calc(var(--grid-unit) / 2);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--color-deep-blue);
+  padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 3);
+  margin: calc(var(--grid-unit) * 3) 0;
+  background-color: rgba(0, 90, 141, 0.05);
+  font-style: italic;
+}
+
+/* Code */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background-color: var(--color-parchment);
+  padding: 2px 4px;
+  border-radius: 3px;
+  border: 1px solid var(--color-steel-gray);
+}
+
+pre {
+  font-family: var(--font-mono);
+  background-color: var(--color-parchment);
+  border: 1px solid var(--color-steel-gray);
+  padding: calc(var(--grid-unit) * 2);
+  margin: calc(var(--grid-unit) * 3) 0;
+  overflow-x: auto;
+  border-radius: 4px;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--color-steel-gray);
+  margin: calc(var(--grid-unit) * 2) 0;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--color-steel-gray);
+  text-align: center;
+  margin-top: calc(var(--grid-unit) / 2);
+}
+
+/* Horizontal Rule */
+hr {
+  border: none;
+  height: 4px;
+  background-color: var(--color-blood-red);
+  margin: calc(var(--grid-unit) * 4) 0;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--color-steel-gray);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

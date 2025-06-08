@@ -1,0 +1,102 @@
+---
+import { config } from '../config';
+---
+
+<header class="site-header">
+  <div class="header-content">
+    <div class="site-title">
+      <a href="/">
+        <img src="/site-title.svg" alt={config.title} class="title-svg" />
+      </a>
+    </div>
+    
+    <nav class="main-navigation" role="navigation" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/blog" class="nav-link">Blog</a></li>
+        <li><a href="/about" class="nav-link">About</a></li>
+        <li><a href="/contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background-color: var(--color-stone-beige);
+    border-bottom: 2px solid var(--color-steel-gray);
+    padding: calc(var(--grid-unit) * 3) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: calc(var(--grid-unit) * 2);
+  }
+
+  .site-title a {
+    display: block;
+    line-height: 0;
+  }
+
+  .title-svg {
+    height: 48px;
+    width: auto;
+    max-width: 280px;
+  }
+
+  .main-navigation {
+    flex-shrink: 0;
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: calc(var(--grid-unit) * 3);
+  }
+
+  .nav-link {
+    font-family: var(--font-heading-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-charcoal);
+    padding: calc(var(--grid-unit) / 2) calc(var(--grid-unit));
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: var(--color-blood-red);
+    border-bottom-color: var(--color-blood-red);
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      text-align: center;
+      gap: calc(var(--grid-unit) * 1.5);
+    }
+
+    .nav-list {
+      gap: calc(var(--grid-unit) * 2);
+    }
+
+    .nav-link {
+      font-size: 0.9rem;
+      padding: calc(var(--grid-unit) / 2);
+    }
+  }
+</style>

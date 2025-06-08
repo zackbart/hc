@@ -1,0 +1,234 @@
+---
+import Layout from '../components/Layout.astro';
+import { config } from '../config';
+
+const recentPosts = await Astro.glob('./blog/*.md');
+const sortedPosts = recentPosts
+  .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
+  .slice(0, 3);
+---
+
+<Layout title={config.title} description={config.description}>
+  <div class="home-page">
+    <section class="hero">
+      <h1 class="hero-title">Welcome to {config.title}</h1>
+      <p class="hero-description">{config.description}</p>
+      <hr class="hero-rule" />
+    </section>
+
+    <section class="recent-posts">
+      <h2 class="section-title">Recent Posts</h2>
+      
+      {sortedPosts.length > 0 ? (
+        <div class="posts-grid">
+          {sortedPosts.map(post => (
+            <article class="post-card">
+              <h3 class="post-title">
+                <a href={post.url}>{post.frontmatter.title}</a>
+              </h3>
+              
+              <time class="post-date" datetime={post.frontmatter.date}>
+                {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </time>
+              
+              {post.frontmatter.excerpt && (
+                <p class="post-excerpt">{post.frontmatter.excerpt}</p>
+              )}
+              
+              {post.frontmatter.categories && (
+                <div class="post-categories">
+                  {post.frontmatter.categories.map((category) => (
+                    <span class="category">{category}</span>
+                  ))}
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
+      ) : (
+        <p class="no-posts">No posts available yet. Create your first post in <code>src/pages/blog/</code></p>
+      )}
+      
+      <div class="view-all">
+        <a href="/blog" class="view-all-link">View All Posts →</a>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .home-page {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: calc(var(--grid-unit) * 8);
+  }
+
+  .hero-title {
+    font-family: var(--font-heading-primary);
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--color-blood-red);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    margin-bottom: calc(var(--grid-unit) * 3);
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--color-steel-gray);
+    margin-bottom: calc(var(--grid-unit) * 4);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-rule {
+    height: 4px;
+    background-color: var(--color-blood-red);
+    border: none;
+    width: 120px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-family: var(--font-heading-secondary);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-blood-red);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: calc(var(--grid-unit) * 4);
+    text-align: center;
+  }
+
+  .posts-grid {
+    display: grid;
+    gap: calc(var(--grid-unit) * 4);
+    margin-bottom: calc(var(--grid-unit) * 6);
+  }
+
+  .post-card {
+    background-color: rgba(212, 200, 160, 0.05);
+    border: 1px solid var(--color-steel-gray);
+    border-radius: 4px;
+    padding: calc(var(--grid-unit) * 3);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .post-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-muted-red);
+  }
+
+  .post-title {
+    font-family: var(--font-heading-secondary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: calc(var(--grid-unit));
+  }
+
+  .post-title a {
+    color: var(--color-charcoal);
+    text-decoration: none;
+  }
+
+  .post-title a:hover,
+  .post-title a:focus {
+    color: var(--color-muted-red);
+  }
+
+  .post-date {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-steel-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: calc(var(--grid-unit) * 1.5);
+  }
+
+  .post-excerpt {
+    color: var(--color-steel-gray);
+    line-height: 1.6;
+    margin-bottom: calc(var(--grid-unit) * 2);
+  }
+
+  .post-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--grid-unit) / 2);
+  }
+
+  .category {
+    background-color: var(--color-deep-blue);
+    color: white;
+    padding: calc(var(--grid-unit) / 4) calc(var(--grid-unit) / 2);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 2px;
+  }
+
+  .no-posts {
+    text-align: center;
+    color: var(--color-steel-gray);
+    font-style: italic;
+    padding: calc(var(--grid-unit) * 4);
+  }
+
+  .no-posts code {
+    background-color: var(--color-parchment);
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+  }
+
+  .view-all {
+    text-align: center;
+  }
+
+  .view-all-link {
+    font-family: var(--font-heading-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-muted-red);
+    padding: calc(var(--grid-unit)) calc(var(--grid-unit) * 2);
+    border: 2px solid var(--color-muted-red);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: inline-block;
+  }
+
+  .view-all-link:hover,
+  .view-all-link:focus {
+    background-color: var(--color-muted-red);
+    color: white;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+    }
+
+    .post-card {
+      padding: calc(var(--grid-unit) * 2);
+    }
+  }
+</style>

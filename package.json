@@ -1,0 +1,32 @@
+{
+  "name": "volks-typo",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "An Astro blog theme exploring the aesthetic tension between Bauhaus modernism and WW2-era monumental design",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "lint": "eslint . --ext .js,.ts,.astro",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "astro": "^5.9.1",
+    "@fontsource/cormorant-garamond": "^5.0.0",
+    "@fontsource/playfair-display": "^5.0.0",
+    "@fontsource/inter": "^5.0.0",
+    "@fontsource/jetbrains-mono": "^5.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.3",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-astro": "^1.2.0",
+    "prettier": "^3.3.0",
+    "prettier-plugin-astro": "^0.14.0",
+    "typescript": "^5.6.0"
+  }
+}
