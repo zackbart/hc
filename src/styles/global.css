@@ -791,6 +791,18 @@ html.theme-dark .btn-secondary:hover {
 }
 
 /* Navigation overrides for all themes - force black navigation */
+
+/* Default theme navigation (no theme class) */
+.nav-link {
+  color: var(--color-black) !important;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--color-black) !important;
+  border-bottom-color: var(--color-black) !important;
+}
+
 html.theme-mono .nav-link {
   color: var(--color-black) !important;
 }
