@@ -530,6 +530,13 @@ html.theme-brutal :not(pre) > code {
 
 html.theme-brutal .nav-link {
   border: none;
+  color: var(--color-black) !important;
+}
+
+html.theme-brutal .nav-link:hover,
+html.theme-brutal .nav-link:focus {
+  color: var(--color-black) !important;
+  border-bottom-color: var(--color-black) !important;
 }
 
 html.theme-brutal .btn {
@@ -781,6 +788,27 @@ html.theme-dark .btn-secondary {
 
 html.theme-dark .btn-secondary:hover {
   background-color: var(--color-accent-secondary);
+}
+
+/* Navigation overrides for all themes - force black navigation */
+html.theme-mono .nav-link {
+  color: var(--color-black) !important;
+}
+
+html.theme-mono .nav-link:hover,
+html.theme-mono .nav-link:focus {
+  color: var(--color-black) !important;
+  border-bottom-color: var(--color-black) !important;
+}
+
+html.theme-dark .nav-link {
+  color: var(--color-white) !important;
+}
+
+html.theme-dark .nav-link:hover,
+html.theme-dark .nav-link:focus {
+  color: var(--color-white) !important;
+  border-bottom-color: var(--color-white) !important;
 }
 
 /* Utility Classes */
