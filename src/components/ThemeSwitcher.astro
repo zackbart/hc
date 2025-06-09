@@ -40,20 +40,20 @@ const THEMES = [
     
     const baseURL = document.querySelector('base')?.href || '/volks-typo/';
     
-    if (theme === 'brutal') {
-      // Ultra Minimal navigation: Blog | Categories | About
-      navList.innerHTML = `
-        <li><a href="${baseURL}blog" class="nav-link">Blog</a></li>
-        <li><a href="${baseURL}categories" class="nav-link">Categories</a></li>
-        <li><a href="${baseURL}about" class="nav-link">About</a></li>
-      `;
-    } else {
+    if (theme === 'default') {
       // Default navigation: Home | Blog | About | Contact
       navList.innerHTML = `
         <li><a href="${baseURL}" class="nav-link">Home</a></li>
         <li><a href="${baseURL}blog" class="nav-link">Blog</a></li>
         <li><a href="${baseURL}about" class="nav-link">About</a></li>
         <li><a href="${baseURL}contact" class="nav-link">Contact</a></li>
+      `;
+    } else {
+      // All other themes use minimal navigation: Blog | Categories | About
+      navList.innerHTML = `
+        <li><a href="${baseURL}blog" class="nav-link">Blog</a></li>
+        <li><a href="${baseURL}categories" class="nav-link">Categories</a></li>
+        <li><a href="${baseURL}about" class="nav-link">About</a></li>
       `;
     }
   };
