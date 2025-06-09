@@ -1,0 +1,110 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout title="About | Volks-Typo" description="About the Volks-Typo Astro theme">
+  <div class="about-page">
+    <header class="page-header">
+      <h1 class="page-title">About</h1>
+      <p class="page-description">
+        The story behind the Volks-Typo theme and its exploration of aesthetic tension.
+      </p>
+      <hr class="page-rule" />
+    </header>
+
+    <div class="content-section">
+      <h2>Design Philosophy</h2>
+      <p>
+        Volks-Typo explores the fascinating intersection between Bauhaus modernism and 
+        WW2-era monumental design. This theme creates a "dissonant harmony" that is 
+        visually striking, functional, and conceptually rich.
+      </p>
+
+      <h2>Core Principles</h2>
+      <ul>
+        <li><strong>Form Follows Function (with a Twist)</strong>: Bauhaus functionalism with monumental design counterpoints</li>
+        <li><strong>Minimalism as a Base</strong>: Clean, uncluttered aesthetic with generous white space</li>
+        <li><strong>Constructivist Influence</strong>: Strong grid system (8-point grid) for structural order</li>
+      </ul>
+
+      <h2>Typography</h2>
+      <p>
+        The careful selection of typefaces creates a conversation between historical 
+        periods. Cormorant Garamond brings classical weight to headings, while Inter 
+        provides modern clarity for body text.
+      </p>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .about-page {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: calc(var(--grid-unit) * 8);
+  }
+
+  .page-title {
+    font-family: var(--font-heading-primary);
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    margin-bottom: calc(var(--grid-unit) * 3);
+  }
+
+  .page-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: calc(var(--grid-unit) * 4);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-rule {
+    height: 4px;
+    background-color: var(--color-accent);
+    border: none;
+    width: 120px;
+    margin: 0 auto;
+  }
+
+  .content-section {
+    line-height: 1.7;
+  }
+
+  .content-section h2 {
+    font-family: var(--font-heading-secondary);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-top: calc(var(--grid-unit) * 6);
+    margin-bottom: calc(var(--grid-unit) * 3);
+  }
+
+  .content-section ul {
+    margin: calc(var(--grid-unit) * 2) 0;
+    padding-left: calc(var(--grid-unit) * 3);
+  }
+
+  .content-section li {
+    margin-bottom: calc(var(--grid-unit));
+  }
+
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2.5rem;
+    }
+
+    .page-description {
+      font-size: 1.125rem;
+    }
+  }
+</style>

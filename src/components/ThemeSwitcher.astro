@@ -27,8 +27,35 @@ const THEMES = [
       document.documentElement.classList.add(`theme-${theme}`);
     }
     
+    // Update navigation based on theme
+    updateNavigation(theme);
+    
     // Save the user's preference to localStorage
     localStorage.setItem('theme', theme);
+  };
+
+  const updateNavigation = (theme) => {
+    const navList = document.getElementById('main-nav-list');
+    if (!navList) return;
+    
+    const baseURL = document.querySelector('base')?.href || '/volks-typo/';
+    
+    if (theme === 'brutal') {
+      // Ultra Minimal navigation: Blog | Categories | About
+      navList.innerHTML = `
+        <li><a href="${baseURL}blog" class="nav-link">Blog</a></li>
+        <li><a href="${baseURL}categories" class="nav-link">Categories</a></li>
+        <li><a href="${baseURL}about" class="nav-link">About</a></li>
+      `;
+    } else {
+      // Default navigation: Home | Blog | About | Contact
+      navList.innerHTML = `
+        <li><a href="${baseURL}" class="nav-link">Home</a></li>
+        <li><a href="${baseURL}blog" class="nav-link">Blog</a></li>
+        <li><a href="${baseURL}about" class="nav-link">About</a></li>
+        <li><a href="${baseURL}contact" class="nav-link">Contact</a></li>
+      `;
+    }
   };
 
   // Set the dropdown to the saved theme on page load
