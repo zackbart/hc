@@ -59,10 +59,14 @@ const THEMES = [
   };
 
   // Set the dropdown to the saved theme on page load
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme && themes.includes(savedTheme)) {
+  const savedTheme = localStorage.getItem('theme') || 'default';
+  if (themes.includes(savedTheme)) {
     themeSelect.value = savedTheme;
     applyTheme(savedTheme);
+  } else {
+    // Default to 'default' theme if no saved theme or invalid theme
+    themeSelect.value = 'default';
+    applyTheme('default');
   }
 
   // Listen for changes on the dropdown
