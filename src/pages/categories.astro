@@ -47,7 +47,7 @@ const sortedCategories = Object.entries(categoryMap)
     <div class="categories-grid">
       {sortedCategories.map(([category, posts]) => (
         <div class="category-card">
-          <a href={`${base}/categories/${category.toLowerCase().replace(/\s+/g, '-')}`} class="category-link">
+          <a href={`${base}categories/${category.toLowerCase().replace(/[\/\s]+/g, '-')}`} class="category-link">
             <h2 class="category-title">{category}</h2>
             <p class="category-count">
               {posts.length} article{posts.length === 1 ? '' : 's'}

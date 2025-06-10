@@ -15,8 +15,11 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
+    "@fontsource/cormorant-garamond": "^5.2.9",
+    "@fontsource/inter": "^5.2.6",
     "@fontsource/jetbrains-mono": "^5.0.0",
     "@fontsource/oswald": "^5.2.6",
+    "@fontsource/playfair-display": "^5.2.6",
     "@fontsource/roboto-condensed": "^5.2.6",
     "@fontsource/work-sans": "^5.2.6",
     "astro": "^5.9.1"

@@ -1,15 +1,13 @@
 ---
-import '@fontsource/oswald/300.css';
-import '@fontsource/oswald/400.css';
-import '@fontsource/oswald/500.css';
-import '@fontsource/oswald/600.css';
-import '@fontsource/oswald/700.css';
-import '@fontsource/roboto-condensed/300.css';
-import '@fontsource/roboto-condensed/400.css';
-import '@fontsource/roboto-condensed/700.css';
-import '@fontsource/work-sans/400.css';
-import '@fontsource/work-sans/500.css';
-import '@fontsource/work-sans/600.css';
+import '@fontsource/cormorant-garamond/400.css';
+import '@fontsource/cormorant-garamond/700.css';
+import '@fontsource/playfair-display/400.css';
+import '@fontsource/playfair-display/700.css';
+import '@fontsource/playfair-display/900.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
 import '@fontsource/jetbrains-mono/400.css';
 import '@fontsource/jetbrains-mono/700.css';
 import '../styles/global.css';
@@ -23,21 +21,29 @@ export interface Props {
   title: string;
   description?: string;
   showSidebar?: boolean;
-  ogImage?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  canonical?: string;
 }
 
-const { title, description, showSidebar = true, ogImage } = Astro.props;
+const { title, description, showSidebar = true, image, type, publishedTime, canonical } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <SEO 
-      title={title} 
-      description={description} 
-      ogImage={ogImage}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <SEO
+      title={title}
+      description={description}
+      image={image}
+      type={type}
+      publishedTime={publishedTime}
+      canonical={canonical}
     />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href={`${import.meta.env.BASE_URL}rss.xml`} />
   </head>
   <body>
     <div class="site-wrapper">
@@ -88,6 +94,7 @@ const { title, description, showSidebar = true, ogImage } = Astro.props;
 
   .sidebar {
     order: -1;
+    padding-top: calc(var(--grid-unit) * 3);
   }
 
   @media (min-width: 1024px) {
@@ -97,6 +104,7 @@ const { title, description, showSidebar = true, ogImage } = Astro.props;
     
     .sidebar {
       order: 0;
+      padding-top: calc(var(--grid-unit) * 3);
     }
   }
 </style>

@@ -33,7 +33,7 @@ const pageTitle = `${frontmatter.title} | Volks-Typo`;
         {frontmatter.categories && frontmatter.categories.length > 0 && (
           <div class="post-categories">
             {frontmatter.categories.map((category: string) => (
-              <a href={`${import.meta.env.BASE_URL}categories/${category.toLowerCase()}`} class="category-tag">
+              <a href={`${import.meta.env.BASE_URL}categories/${category.toLowerCase().replace(/[\/\s]+/g, '-')}`} class="category-tag">
                 {category}
               </a>
             ))}

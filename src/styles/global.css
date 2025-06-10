@@ -2,29 +2,31 @@
 
 /* Color Variables */
 :root {
-  /* Monotone Palette */
-  --color-white: #ffffff;
-  --color-light-gray: #f5f5f5;
-  --color-medium-gray: #888888;
-  --color-dark-gray: #333333;
-  --color-black: #000000;
+  /* Primary Palette (Bauhaus) */
+  --color-parchment: #f0e9d6;
+  --color-charcoal: #2c2c2c;
+  --color-muted-red: #c13127;
+  --color-deep-blue: #005a8d;
+  --color-ochre: #e8a100;
   
-  /* Accent Color */
-  --color-accent-red: #dc2626;
+  /* Secondary Palette (WW2-Era) */
+  --color-blood-red: #8b0000;
+  --color-stone-beige: #d4c8a0;
+  --color-steel-gray: #3d3d3d;
   
   /* Semantic Colors */
-  --color-background: var(--color-white);
-  --color-surface: var(--color-light-gray);
-  --color-text-primary: var(--color-black);
-  --color-text-secondary: var(--color-dark-gray);
-  --color-text-muted: var(--color-medium-gray);
-  --color-border: var(--color-medium-gray);
-  --color-accent: var(--color-accent-red);
+  --color-background: var(--color-parchment);
+  --color-surface: var(--color-stone-beige);
+  --color-text-primary: var(--color-charcoal);
+  --color-text-secondary: var(--color-steel-gray);
+  --color-text-muted: #666666;
+  --color-border: var(--color-steel-gray);
+  --color-accent: var(--color-blood-red);
   
   /* Typography */
-  --font-heading-primary: 'Oswald', sans-serif;
-  --font-heading-secondary: 'Roboto Condensed', sans-serif;
-  --font-body: 'Work Sans', sans-serif;
+  --font-heading-primary: 'Cormorant Garamond', serif;
+  --font-heading-secondary: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   
   /* Layout */
@@ -177,7 +179,6 @@ hr {
   background-color: var(--color-accent);
   margin: calc(var(--grid-unit) * 4) 0;
 }
-
 
 
 /* Utility Classes */
