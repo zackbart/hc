@@ -543,7 +543,18 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     display: none !important;
   }
 
-  .hamburger-toggle,
+  .hamburger-toggle {
+    background: none;
+    border: none;
+    color: var(--color-text-primary);
+    padding: calc(var(--grid-unit));
+    cursor: pointer;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .rss-toggle {
     background: none;
     border: none;
@@ -554,6 +565,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
   }
 
   .hamburger-toggle:hover,
@@ -631,6 +643,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     .site-title {
       justify-self: center;
       text-align: center;
+      grid-column: 2; /* Explicitly place in center column */
     }
 
     .site-title a {
