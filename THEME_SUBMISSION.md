@@ -11,20 +11,22 @@ This guide helps you prepare and submit Volks-Typo to the Astro theme portal.
 - [x] Informative README to help users get started
 
 ### ✅ Screenshots (Required)
-Before submitting, generate the required screenshots:
+Screenshots have been captured and are ready in the `screenshots/` directory:
 
-1. Install Playwright: `npm install`
-2. Start the dev server: `npm run dev`
-3. In a new terminal, run: `npm run generate-screenshots`
-
-This will create:
-- `volks-typo-featured.png` (1280x640) - Featured image for the portal
-- `volks-typo-desktop.png` - Desktop view with sidebar
-- `volks-typo-mobile.png` - Mobile responsive view
-- `volks-typo-blog-post.png` - Blog post typography showcase
+**Desktop Views:**
+- `volks-typo-featured-main.png` (1440x900) - Primary submission image
+- `volks-typo-homepage.png` - Homepage with hero section
+- `volks-typo-blog.png` - Blog listing page
+- `volks-typo-post.png` - Individual blog post
+- `volks-typo-about.png` - About page
 - `volks-typo-categories.png` - Categories page
 
-**Note:** You may want to manually create a more polished featured image that combines multiple views or adds text overlays.
+**Mobile Views:**
+- `volks-typo-mobile-home.png` - Mobile homepage
+- `volks-typo-mobile-post.png` - Mobile blog post
+- `volks-typo-mobile-menu.png` - Mobile navigation menu
+
+All screenshots are optimized and ready for submission.
 
 ## Submission Form Information
 
@@ -36,30 +38,32 @@ This will create:
 
 **Public repo URL:** https://github.com/jdrhyne/volks-typo
 
-**Live demo URL:** [Your deployed demo URL]
+**Live demo URL:** https://jdrhyne.github.io/volks-typo/
 
 **Short description:**
 ```
-A striking Astro blog theme exploring the aesthetic tension between Bauhaus modernism and WW2-era monumental design. Features a sophisticated dual-palette system, carefully curated typography, and ultra-fast performance with zero JavaScript.
+A bold, minimalist Astro blog theme combining Bauhaus modernism with striking typography. Features responsive design, RSS feeds, search functionality, and professional avatar system with zero JavaScript for maximum performance.
 ```
 
 **Full description for the theme detail page:**
 ```
-Volks-Typo is a unique Astro blog theme that creates a "dissonant harmony" between Bauhaus functionalism and WW2-era monumental aesthetics. 
+Volks-Typo is a bold, minimalist Astro blog theme that combines Bauhaus modernism with striking typography for a professional, high-impact aesthetic.
 
 Key Features:
-• Dual design philosophy with Bauhaus minimalism and monumental counterpoints
-• Sophisticated typography system using Cormorant Garamond, Playfair Display, and Inter
-• Two-tone color palettes: Bauhaus (warm neutrals) and Monumental (bold reds)
+• Bold typography with uppercase headings and strong visual hierarchy
+• Monotone color palette (black, white, gray) with strategic red accents
 • Lightning-fast performance with zero JavaScript and minimal CSS (~20KB)
-• Full blog support with categories, tags, and archives
-• Mobile-first responsive design with elegant desktop sidebar
-• SEO optimized with meta tags and structured data
-• Fully accessible with semantic HTML
-• Self-hosted fonts for privacy
+• Complete blog functionality with categories, tags, and RSS feeds
+• Real-time search with overlay interface
+• Mobile-first responsive design with hamburger navigation
+• Professional avatar system with SVG placeholders
+• SEO optimized with comprehensive meta tags
+• Fully accessible with semantic HTML and ARIA attributes
+• Self-hosted fonts for privacy and performance
 • TypeScript support throughout
+• Easy configuration via single config file
 
-Perfect for design-conscious bloggers, creative professionals, and anyone who appreciates the tension between historical design movements.
+Perfect for personal blogs, design portfolios, content creators, and professional sites that value clean aesthetics and maximum performance. The theme's distinctive style makes content stand out while maintaining excellent readability and user experience.
 ```
 
 ### Tools Used
@@ -70,38 +74,38 @@ Select all that apply:
 - [x] SEO
 - [x] Accessibility
 - [x] Blog
+- [x] RSS
+- [x] Search
 
 ### Categories
 Select all that apply:
 - [x] Blog
 - [x] Minimal
-- [x] Portfolio (if applicable)
+- [x] Portfolio
 
 ## Deployment for Demo
 
-Before submitting, deploy a live demo:
+✅ **Live demo deployed:** https://jdrhyne.github.io/volks-typo/
 
-1. **Option 1: Vercel**
-   - Connect your GitHub repo to Vercel
-   - Deploy with default settings
-   - Use the generated URL for your demo
-
-2. **Option 2: Netlify**
-   - Connect your GitHub repo to Netlify
-   - Deploy with default settings
-   - Use the generated URL for your demo
-
-3. **Option 3: GitHub Pages**
-   - Update `astro.config.mjs` with your repo name
-   - Use GitHub Actions for deployment
-   - URL will be: `https://[username].github.io/volks-typo`
+The theme is deployed using GitHub Pages with automated deployment via GitHub Actions. The deployment includes:
+- All pages and functionality working correctly
+- Proper base URL configuration for GitHub Pages
+- Search functionality with live data
+- RSS feed generation
+- Mobile navigation working properly
+- All screenshots taken from the live site
 
 ## Final Steps
 
-1. Ensure all screenshots are optimized (< 500KB each)
-2. Deploy your live demo
-3. Double-check all links work correctly
-4. Submit via: https://portal.astro.build/themes/submit
+✅ **Ready for submission!**
+
+1. ✅ Screenshots optimized and ready (all < 500KB each)
+2. ✅ Live demo deployed and working: https://jdrhyne.github.io/volks-typo/
+3. ✅ All links verified and functional
+4. ✅ Latest release tagged: v1.0.1
+5. ✅ Comprehensive documentation complete
+
+**Next step:** Submit via https://portal.astro.build/themes/submit
 
 ## Post-Submission
 
