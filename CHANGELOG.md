@@ -1,0 +1,99 @@
+# Changelog
+
+All notable changes to the Volks-Typo Astro theme will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Added
+- Enhanced avatar system with SVG placeholders and realistic headshot appearance
+- Dynamic author information integration in About page
+- Improved mobile header alignment and responsive design
+
+### Fixed
+- Mobile header title centering and alignment issues
+- RSS icon color consistency
+- Avatar SVG blending within circular borders
+- Mobile navigation layout improvements
+
+## [1.0.0] - 2025-06-10
+
+### Added
+- **Initial release** of Volks-Typo Astro theme
+- Complete theme implementation exploring Bauhaus modernism and WW2-era monumental design
+- Responsive layout with mobile-first design approach
+- Comprehensive color palette with primary Bauhaus colors and secondary WW2-era accents
+- Typography system featuring Cormorant Garamond, Playfair Display, and Inter fonts
+- Custom SVG site title with German institutional signage inspiration
+- Full Astro integration with TypeScript support
+- SEO optimization with meta descriptions and structured data
+- RSS feed generation and sitemap support
+- Search functionality with live results
+- Categories system with compact card layout
+- Syntax highlighting with German flag-inspired color scheme using Prism
+- Mobile hamburger navigation menu
+- Social media integration (GitHub, X, Instagram, LinkedIn, Email)
+- About page with author bio and social links
+- Sample blog content exploring design principles
+- MIT License for open-source distribution
+- Comprehensive README with installation and usage instructions
+- GitHub Pages deployment workflow
+- Automated screenshot generation with Playwright
+- Professional package.json metadata for Astro theme submission
+
+### Technical Features
+- **Layout System**: CSS Grid-based responsive architecture
+- **Component Structure**: Modular Astro components (Layout, Header, Sidebar, Footer)
+- **Content Management**: Astro Content Collections for blog posts
+- **Styling**: Scoped CSS with CSS variables for theme consistency
+- **Fonts**: Self-hosted via @fontsource packages
+- **Build Tools**: ESLint, Prettier, TypeScript checking
+- **Development**: Hot reload and modern development server
+
+### Design Philosophy
+- **Form Follows Function**: Bauhaus functionalism with monumental design counterpoints
+- **Minimalism as Base**: Clean, uncluttered aesthetic with generous white space
+- **Constructivist Influence**: Strong 8-point grid system for structural order
+- **Dissonant Harmony**: Visual tension between modernist and monumental aesthetics
+
+### Color Palette
+- **Primary (Bauhaus)**: Parchment White (#f0e9d6), Charcoal Black (#2c2c2c), Muted Red (#c13127), Deep Blue (#005a8d), Ochre Yellow (#e8a100)
+- **Secondary (WW2-Era)**: Blood Red (#8b0000), Stone Beige (#d4c8a0), Steel Gray (#3d3d3d)
+
+### Content
+- Five thematic blog posts exploring design principles:
+  - Bauhaus Design Principles
+  - Color Theory in Industrial Design
+  - CSS Grid and Modernist Layouts
+  - Evolution of Typography
+  - Minimalist Architecture and Digital Design
+
+## [0.9.0-alpha] - 2025-06-09
+
+### Added
+- Theme variations system (later simplified to single default theme)
+- Multiple design iterations and experimental approaches
+- GitHub Pages deployment infrastructure
+- Mobile navigation improvements
+- Search functionality enhancements
+- Blog post routing and navigation fixes
+
+### Development Milestones
+- **June 8, 2025**: Initial theme concept and core implementation
+- **June 9, 2025**: Major feature additions, mobile optimizations, and content creation
+- **June 10, 2025**: Final polish, Astro submission preparation, and production release
+
+---
+
+## Development Notes
+
+This theme was developed with a focus on creating a unique aesthetic that explores the tension between Bauhaus modernist principles and WW2-era monumental design. The development process involved extensive iteration on typography, color schemes, and layout systems to achieve the desired "dissonant harmony" effect.
+
+The project evolved from experimental multi-theme variations to a focused single-theme implementation optimized for the Astro ecosystem and theme submission requirements.
+
+### Attribution
+
+Theme created by [@jdrhyne](https://github.com/jdrhyne) with assistance from Claude Code.
+Generated with [Claude Code](https://claude.ai/code)

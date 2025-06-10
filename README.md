@@ -2,6 +2,8 @@
 
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Latest Release](https://img.shields.io/github/v/release/jdrhyne/volks-typo)](https://github.com/jdrhyne/volks-typo/releases)
+[![Changelog](https://img.shields.io/badge/changelog-📝-blue.svg)](CHANGELOG.md)
 
 A striking Astro blog theme that explores the aesthetic tension between Bauhaus modernism and WW2-era monumental design. Volks-Typo creates a "dissonant harmony" that is visually compelling, highly functional, and conceptually rich.
 
@@ -28,9 +30,12 @@ A striking Astro blog theme that explores the aesthetic tension between Bauhaus 
 ![Volks-Typo Desktop View](screenshots/volks-typo-desktop.png)
 *Desktop layout showcasing the elegant two-column design with sidebar navigation*  
 
-## 🚀 Demo
+## 🚀 Demo & Releases
 
-Check out the live demo to see Volks-Typo in action (demo link coming soon).
+- **Live Demo:** [https://jdrhyne.github.io/volks-typo/](https://jdrhyne.github.io/volks-typo/)
+- **Latest Release:** [v1.0.0](https://github.com/jdrhyne/volks-typo/releases/latest)
+- **All Releases:** [View on GitHub](https://github.com/jdrhyne/volks-typo/releases)
+- **Changelog:** [CHANGELOG.md](CHANGELOG.md)
 
 ## 💻 Tech Stack
 
@@ -323,10 +328,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Built with [Astro](https://astro.build)
 - Typography powered by [Fontsource](https://fontsource.org/)
 
+## 📋 Project Information
+
+- **Changelog:** [CHANGELOG.md](CHANGELOG.md) - Detailed version history and release notes
+- **Releases:** [GitHub Releases](https://github.com/jdrhyne/volks-typo/releases) - Download specific versions
+- **Issues:** [GitHub Issues](https://github.com/jdrhyne/volks-typo/issues) - Bug reports and feature requests
+- **Discussions:** [GitHub Discussions](https://github.com/jdrhyne/volks-typo/discussions) - Community support
+
 ## 💬 Support
 
-- **Issues:** [GitHub Issues](https://github.com/jdrhyne/volks-typo/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/jdrhyne/volks-typo/discussions)
 - **Author:** [@jdrhyne](https://github.com/jdrhyne) • Personal blog: [jdrhyne.me](https://jdrhyne.me) (under construction 🚧) 
 ---
 
