@@ -1,6 +1,5 @@
 ---
 import Layout from '../components/Layout.astro';
-import { config } from '../config';
 
 const recentPosts = await Astro.glob('./blog/*.md');
 const sortedPosts = recentPosts
@@ -8,16 +7,16 @@ const sortedPosts = recentPosts
   .slice(0, 3);
 ---
 
-<Layout title="Volks-Typo: Ultra Minimal Theme" description="A brutally minimal exploration of typography and space. Where function strips away all but the essential." showSidebar={false}>
+<Layout title="Volks-Typo: Bauhaus Meets Monumental Design" description="An Astro blog theme exploring the aesthetic tension between Bauhaus modernism and WW2-era monumental design. Where functionalism meets grandeur in dissonant harmony." showSidebar={false}>
   <div class="landing-page">
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
         <h1 class="hero-title">Volks-Typo</h1>
-        <p class="hero-subtitle">Ultra Minimal Theme</p>
+        <p class="hero-subtitle">Bauhaus Meets Monumental</p>
         <p class="hero-description">
-          A brutally minimal exploration of typography and space. 
-          Where function strips away all but the essential.
+          An aesthetic exploration where Bauhaus functionalism collides with 
+          monumental grandeur. Form follows function, with a twist.
         </p>
         <hr class="hero-rule" />
         <div class="hero-actions">
@@ -80,8 +79,8 @@ const sortedPosts = recentPosts
         <h2 class="section-title">Design Philosophy</h2>
         <div class="features-grid">
           <div class="feature-card">
-            <h3 class="feature-title">Ultra Minimal</h3>
-            <p class="feature-description">Every element stripped to pure function. No decoration, no distraction.</p>
+            <h3 class="feature-title">Dissonant Harmony</h3>
+            <p class="feature-description">Bauhaus minimalism meets monumental design. Clean aesthetics with bold, commanding presence.</p>
           </div>
           <div class="feature-card">
             <h3 class="feature-title">Perfect Readability</h3>
@@ -92,12 +91,12 @@ const sortedPosts = recentPosts
             <p class="feature-description">Natural reading flow with consistent left alignment throughout all content.</p>
           </div>
           <div class="feature-card">
-            <h3 class="feature-title">Single Font</h3>
-            <p class="feature-description">Work Sans for everything. Unified typography creates visual harmony.</p>
+            <h3 class="feature-title">Typographic Tension</h3>
+            <p class="feature-description">Cormorant Garamond meets Inter. Classical serif headings contrast modern sans-serif body.</p>
           </div>
           <div class="feature-card">
-            <h3 class="feature-title">Clean Structure</h3>
-            <p class="feature-description">Centered layout with consistent spacing and subtle section dividers.</p>
+            <h3 class="feature-title">Constructivist Grid</h3>
+            <p class="feature-description">8-point grid system creates structural order. Blood-red rules command attention.</p>
           </div>
           <div class="feature-card">
             <h3 class="feature-title">Fast Performance</h3>
@@ -117,17 +116,17 @@ const sortedPosts = recentPosts
         
         <div class="typography-samples">
           <div class="type-sample">
-            <h1 class="sample-h1">MINIMAL DESIGN</h1>
-            <p class="type-meta">Work Sans • 600 Weight • Headings</p>
+            <h1 class="sample-h1">MONUMENTAL TYPE</h1>
+            <p class="type-meta">Cormorant Garamond • 900 Weight • Blood Red</p>
           </div>
           
           <div class="type-sample">
-            <p class="sample-body">Clean, readable typography focused on content consumption. Every letter optimized for clarity and comprehension across all devices and contexts.</p>
-            <p class="type-meta">Work Sans • 400 Weight • Body Text</p>
+            <p class="sample-body">Bauhaus-inspired body text in Inter creates perfect readability. Function meets form in every letterform, optimized for modern screens.</p>
+            <p class="type-meta">Inter • 400 Weight • Charcoal Black</p>
           </div>
           
           <div class="type-sample">
-            <code class="sample-code">npm install ultra-minimal</code>
+            <code class="sample-code">npm install volks-typo</code>
             <p class="type-meta">JetBrains Mono • Monospace Code</p>
           </div>
         </div>
@@ -143,8 +142,8 @@ const sortedPosts = recentPosts
             <h3 class="step-number">01</h3>
             <div class="step-content">
               <h4 class="step-title">Clone Repository</h4>
-              <pre class="code-block"><code>git clone https://github.com/yourusername/volks-typo-ultra-minimal.git
-cd volks-typo-ultra-minimal</code></pre>
+              <pre class="code-block"><code>git clone https://github.com/yourusername/volks-typo.git
+cd volks-typo</code></pre>
             </div>
           </div>
           
