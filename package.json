@@ -14,6 +14,7 @@
     "generate-screenshots": "node generate-screenshots.js"
   },
   "dependencies": {
+    "@astrojs/rss": "^4.0.12",
     "@fontsource/jetbrains-mono": "^5.0.0",
     "@fontsource/oswald": "^5.2.6",
     "@fontsource/roboto-condensed": "^5.2.6",
