@@ -321,7 +321,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Design philosophy inspired by the Bauhaus movement and WW2-era monumental aesthetics
+- Design philosophy inspired by the Bauhaus movement, WW2-era monumental aesthetics, and street & subway signage from Vienna 🇦🇹
 - Built with [Astro](https://astro.build)
 - Typography powered by [Fontsource](https://fontsource.org/)
 
