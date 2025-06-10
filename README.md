@@ -7,7 +7,7 @@ A striking Astro blog theme that explores the aesthetic tension between Bauhaus 
 
 ## 🎨 Theme by
 
-**[Jonathan D. Rhyne](https://github.com/jdrhyne)** • [jdrhyne.me](https://jdrhyne.me)
+**[@jdrhyne](https://github.com/jdrhyne)** • Personal blog: [jdrhyne.me](https://jdrhyne.me)
 
 ## 🌟 Features
 
@@ -315,8 +315,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Issues:** [GitHub Issues](https://github.com/jdrhyne/volks-typo/issues)
 - **Discussions:** [GitHub Discussions](https://github.com/jdrhyne/volks-typo/discussions)
-- **Author:** [Jonathan D. Rhyne](https://jdrhyne.me)
+- **Author:** [@jdrhyne](https://github.com/jdrhyne) • Personal blog: [jdrhyne.me](https://jdrhyne.me)
 
 ---
 
-**[Volks-Typo](https://github.com/jdrhyne/volks-typo)** by [Jonathan D. Rhyne](https://github.com/jdrhyne) • MIT License
+**[Volks-Typo](https://github.com/jdrhyne/volks-typo)** by [@jdrhyne](https://github.com/jdrhyne) • MIT License
