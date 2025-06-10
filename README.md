@@ -7,8 +7,8 @@
 
 A striking Astro blog theme that explores the aesthetic tension between Bauhaus modernism and WW2-era monumental design. Volks-Typo creates a "dissonant harmony" that is visually compelling, highly functional, and conceptually rich.
 
-![Volks-Typo Featured Post](screenshots/volks-typo-featured.png)
-*Striking typography and the distinctive blood-red monumental rule that defines Volks-Typo's unique aesthetic*
+![Volks-Typo Featured](screenshots/volks-typo-featured-main.png)
+*Bold, minimalist design with striking typography and professional layout*
 
 ## 🎨 Theme by
 
@@ -27,8 +27,8 @@ A striking Astro blog theme that explores the aesthetic tension between Bauhaus 
 ✓ **Type-Safe** - Full TypeScript support  
 ✓ **Easy Configuration** - Single config file for all settings  
 
-![Volks-Typo Desktop View](screenshots/volks-typo-desktop.png)
-*Desktop layout showcasing the elegant two-column design with sidebar navigation*  
+![Volks-Typo Desktop View](screenshots/volks-typo-homepage.png)
+*Homepage layout showcasing the clean design and navigation*  
 
 ## 🚀 Demo & Releases
 
@@ -181,11 +181,11 @@ The theme employs a sophisticated dual palette system:
 - **Grid:** 8-point grid system for consistent spacing
 - **Max Width:** 1200px container for optimal reading
 
-![Volks-Typo Mobile View](screenshots/volks-typo-mobile.png)
-*Responsive mobile layout maintaining the theme's distinctive aesthetic on smaller screens*
+![Volks-Typo Mobile View](screenshots/volks-typo-mobile-home.png)
+*Responsive mobile layout with hamburger navigation*
 
-![Volks-Typo Categories Page](screenshots/volks-typo-categories.png)
-*Categories page featuring the ochre yellow accent color and clean grid layout*
+![Volks-Typo Blog Page](screenshots/volks-typo-blog.png)
+*Blog listing page with clean typography and organized layout*
 
 ## 📝 Writing Content
 
