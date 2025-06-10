@@ -151,28 +151,27 @@ export const config = {
 
 ### Typography
 
-Volks-Typo uses a carefully curated typography system that creates visual hierarchy through contrast:
+Volks-Typo uses a modern, clean typography system focused on readability and strong hierarchy:
 
-- **Headings:** Cormorant Garamond (H1) and Playfair Display (H2, H3) - "Stripped Classicism" with all caps, wide letter-spacing, and bold weight
-- **Body Text:** Inter - Clean, highly readable sans-serif optimized for screens
-- **Code:** JetBrains Mono - Developer-friendly monospace font
-- **Special:** Fraktur-style SVG for the main site title
+- **Primary Headings:** Oswald - Bold, condensed sans-serif for maximum impact
+- **Secondary Headings:** Roboto Condensed - Clean, professional condensed font
+- **Body Text:** Work Sans - Highly readable sans-serif optimized for web
+- **Code/Monospace:** JetBrains Mono - Developer-friendly monospace font
+- **Site Title:** Custom SVG with distinctive styling
 
 ### Color Palette
 
-The theme employs a sophisticated dual palette system:
+The theme uses a clean, professional monotone palette with strategic red accents:
 
-**Primary (Bauhaus)**
-- Parchment White (`#f0e9d6`) - Main backgrounds
-- Charcoal Black (`#2c2c2c`) - Body text
-- Muted Red (`#c13127`) - Links and active states
-- Deep Blue (`#005a8d`) - Secondary accents
-- Ochre Yellow (`#e8a100`) - Tags and categories
+**Monotone Base**
+- White (`#ffffff`) - Primary background
+- Light Gray (`#f5f5f5`) - Surface backgrounds, cards
+- Medium Gray (`#888888`) - Muted text, borders
+- Dark Gray (`#333333`) - Secondary text
+- Black (`#000000`) - Primary text, maximum contrast
 
-**Secondary (Monumental)**
-- Blood Red (`#8b0000`) - Oversized headings
-- Stone Beige (`#d4c8a0`) - Header/footer backgrounds
-- Steel Gray (`#3d3d3d`) - Borders and dividers
+**Accent Color**
+- Red (`#dc2626`) - Primary accent for headings, links, and interactive elements
 
 ### Layout System
 
@@ -274,17 +273,15 @@ Edit CSS variables in `src/styles/global.css`:
 
 ```css
 :root {
-  /* Primary Palette */
-  --color-parchment: #f0e9d6;
-  --color-charcoal: #2c2c2c;
-  --color-muted-red: #c13127;
-  --color-deep-blue: #005a8d;
-  --color-ochre: #e8a100;
+  /* Monotone Palette */
+  --color-white: #ffffff;
+  --color-light-gray: #f5f5f5;
+  --color-medium-gray: #888888;
+  --color-dark-gray: #333333;
+  --color-black: #000000;
   
-  /* Secondary Palette */
-  --color-blood-red: #8b0000;
-  --color-stone-beige: #d4c8a0;
-  --color-steel-gray: #3d3d3d;
+  /* Accent Color */
+  --color-accent-red: #dc2626;
 }
 ```
 
@@ -294,9 +291,9 @@ Modify font families in `src/styles/global.css`:
 
 ```css
 :root {
-  --font-heading-primary: 'Cormorant Garamond', serif;
-  --font-heading-secondary: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading-primary: 'Oswald', sans-serif;
+  --font-heading-secondary: 'Roboto Condensed', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
 ```
