@@ -6,13 +6,10 @@ const sortedPosts = allPosts
   .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
 ---
 
-<Layout title="Blog | Volks-Typo" description="All blog posts from the Volks-Typo theme">
+<Layout title="Blog | Volks-Typo" description="All blog posts from the Volks-Typo theme" showSidebar={true}>
   <div class="blog-page">
     <header class="blog-header">
       <h1 class="blog-title">Blog</h1>
-      <p class="blog-description">
-        Exploring design, typography, and the intersection of historical aesthetics with modern functionality.
-      </p>
       <hr class="blog-rule" />
     </header>
 
@@ -60,42 +57,31 @@ const sortedPosts = allPosts
 
 <style>
   .blog-page {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
   }
 
   .blog-header {
-    text-align: center;
-    margin-bottom: calc(var(--grid-unit) * 8);
+    margin-bottom: calc(var(--grid-unit) * 6);
   }
 
   .blog-title {
     font-family: var(--font-heading-primary);
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 900;
     color: var(--color-accent);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 1.1;
-    margin-bottom: calc(var(--grid-unit) * 3);
+    margin-bottom: calc(var(--grid-unit) * 2);
   }
 
-  .blog-description {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: var(--color-text-secondary);
-    margin-bottom: calc(var(--grid-unit) * 4);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   .blog-rule {
     height: 4px;
     background-color: var(--color-accent);
     border: none;
     width: 120px;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .posts-list {
