@@ -20,12 +20,12 @@ const categories = [...new Set(allPosts.flatMap(post => post.frontmatter.categor
       ) : (
         <div class="avatar-placeholder">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Head -->
-            <circle cx="40" cy="25" r="12" fill="currentColor"/>
+            <!-- Head (oval shape) -->
+            <ellipse cx="40" cy="26" rx="14" ry="16" fill="currentColor"/>
             <!-- Neck -->
-            <rect x="36" y="35" width="8" height="10" fill="currentColor"/>
-            <!-- Shoulders/Body -->
-            <path d="M24 80v-18c0-6 4-12 10-14v-3h12v3c6 2 10 8 10 14v18H24z" fill="currentColor"/>
+            <path d="M32 38 Q32 42 34 44 L46 44 Q48 42 48 38 Z" fill="currentColor"/>
+            <!-- Shoulders -->
+            <path d="M34 44 Q30 46 26 50 Q22 54 20 60 L20 80 L60 80 L60 60 Q58 54 54 50 Q50 46 46 44 Z" fill="currentColor"/>
           </svg>
         </div>
       )}
