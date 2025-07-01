@@ -17,12 +17,12 @@ export interface SiteConfig {
 }
 
 export const config: SiteConfig = {
-  title: "Volks-Typo",
-  description: "A blog exploring the intersection of design, typography, and history",
+  title: "Honest Conversations",
+  description: "Join Honest Conversations: Your online destination for genuine connections and open conversations with an authentic community.",
   author: {
-    name: "Your Name",
-    bio: "Writer, designer, and explorer of aesthetic tensions between past and present.",
-    // avatar: "/images/avatar.jpg" // Uncomment and add your avatar image to public/images/
+    name: "Yoel & Christy Bartolome",
+    bio: "The Church has been given the great responsibility to live in His kingdom that is both here but not yet. A kingdom that seems foolish to those that do not believe and can not see it. As followers we live by faith, walking out what is required of us - to do justice, love kindness and walk humbly before our God. Our reason we are writing this blog is because after 31 years of ministry and hundreds of years of history, we have become accustomed in church leadership to ignore justice, walk proudly and aspire for adulation from people rather than God.",
+    avatar: "/public/avatar.jpg" // Uncomment and add your avatar image to public/images/
   },
   social: {
     github: "https://github.com/yourusername",
@@ -30,7 +30,7 @@ export const config: SiteConfig = {
     linkedin: "https://linkedin.com/in/yourusername",
     email: "your.email@example.com"
   },
-  siteUrl: "https://volks-typo.example.com"
+  siteUrl: "https://honestconversations.net"
 };
 
 // Export constants for SEO component

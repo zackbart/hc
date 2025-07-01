@@ -1,0 +1,42 @@
+---
+title: "Sycophants"
+date: "Wed, 09 Feb 2022 08:00:00 GMT"
+creator: "Yoel Bartolome"
+categories: [Narcissism, Accountability]
+link: "https://www.honestconversations.net/post/sycophants"
+---
+
+Sycophants
+Yoel Bartolome
+Feb 9, 2022
+5 min read
+Updated:
+Aug 20, 2022
+At Honest Conversations our goal and objective is to talk about sensitive subjects in current church culture from a leadership and victim perspective. There are many reasons that people are uncomfortable facing these issues including punitive ramifications. I recently had a well-known pastor thank me for bringing these subjects to light in the hope of correcting and creating a good and healthy culture within the church. It gave me hope that there are men and women in church leadership that are wanting and doing good. In the post
+,
+Living in the Wake of a Narcissistic Leader
+, I identified one of the most blaring issues that has plagued our churches; when a narcissistic leader comes to the church. They change culture little by little, and before you know it people have lost the ability to differentiate between loyalty and justice. Rather than being Christ-centered, there is an overwhelming pull to be loyal to the tribe’s needs and focus. The concepts of serving the church, loving the church, and giving to the church get intertwined with a culture that thinks that without a church organization you cannot be a strong Christ-follower. The narcissistic leader does this so well that good, well-intended, God-fearing people get caught up not knowing the difference between being faithful to God or being faithful to their church.  A “me-first” approach is a dance that every narcissistic leader knows the steps to, and more importantly this leader knows what kind of dance partners to choose who will make the whole thing work. In today’s Honest Conversation, I would like to talk about an essential dance partner that these unscrupulous leaders need. They are called
+Sycophants
+.
+What are Sycophants? The other day after hightide, I was walking along the coastline and stopped long enough to observe some tide pools. I was amazed and surprised at how many creatures were living there. They had been in front of me the whole time and I had just never noticed them. Sycophants can be found everywhere and are necessary creatures for unhealthy leaders. Just like the creatures in tide pools, Sycophants thrive in the climate and culture of many unhealthy churches …we just do not notice them. In
+A Church Called Tov
+, author Scot McKnight writes, “The selfish drive for importance compels narcissistic pastors to surround themselves with admirers. They will break relationship with people who don’t give the esteem and honor they desire. Narcissists often gravitate toward enablers, who will pave their way to power—or at least not stand in the way. The operative term that describes these enablers is
+sycophants
+---
+people who fawn over someone in a position of power of influence in order to gain power and influence of their own.
+Some pastors nurture sycophants and before long the elder board or deacon board is populated with apple-polishers who are malleable to the pastor’s will and often unwilling to stand up to the pastor with solid—and necessary biblical oversight.”
+Sycophants can be found on church councils, staffs and unfortunately anywhere someone is trying to climb the hierarchal ladder found in most churches. Some people are so desperate to be on a church staff or stage that they will do anything to make that happen. Narcissistic leaders will use their role as a spiritual paternal figure to get what they want from these people. In my time working at churches, I have personally witnessed the rise of certain sycophants. It has been frustrating to work through when you can see their obvious intentions and their posturing just to please the leader. I remember when a couple came from a leadership role at a large megachurch where the pastor was under investigation for a hostile work environment, sexual misconduct, and excessive financial spending. This couple brought with them the behavior patterns that had worked at their previous megachurch. With a refined skill set they began to replicate the same patterns in our church. They were experts in climbing the church ladder, using their networks and influence to get close to the senior leaders, and before you knew it they had a seat on the church board, they were the very definition of a sycophant. The senior pastors had found their new dance partners. Sycophants can be counted on to only give the kind of feedback that the pastor wants to hear so they can maintain their newly attained status in the church.
+How do we identify a culture where sycophants breed and thrive? It’s a culture where people are fearful of saying anything that the leader might perceive as disloyal. This culture drives even those who can clearly see wrongdoing to silence. And worst of all is when this culture is accompanied by bad hermeneutics with self-serving and out-of-context biblical teaching. Well-known author Scot McKnight identifies seven phases of a power-through-fear culture:
+It begins when power and authority are invested in an individual—most often a pastor. Sycophants cannot resist the lure of being around this leader in the hopes that they will share in the same power and adulation.
+The pastor’s approval becomes the gold standard. The power-through-fear culture grows when churches infer a connection between the pastor’s approval and God’s approval.
+Those approved by the pastor gain “status enhancement.” This is when an outsider becomes an insider and believes he or she has found favor with God because the power-driven pastor has deemed them as significant. Sycophants see this as the key that unlocks many opportunities.
+Power pastors cut with both sides of their blade. The blade is used for approval and disapproval. Those who displease the power pastor will experience “status diminishment.” The fear of disappointment is used as an engine to promote loyalty.
+The power pastor culture transitions into a fear-based culture. The inner circle will enjoy backstage green rooms, special leaders meetings, and other privileged access to the power pastor. Along with this access comes the fear of being kicked out and finding that you are no longer part of this exclusive group.
+Judgements and decisions are rendered behind a wall of secrecy. This kind of secrecy induces fear in other staff members and pressures them to stay in line. When an employee leaves the staff they will be encouraged to “end well”, which is a euphemism for…do not talk.
+Behind the wall of secrecy lurks a perpetual fear of status degradation. This is where false narratives are created about people that do speak out. It is to make a person feel ashamed.
+The end of the power culture is removal from the toxic culture of power-through-fear, leading very often to guilt and humiliation and depression and the impacts of gaslighting. [
+christianitytoday.com
+]
+Sycophants come in all shapes and sizes. They do not all look the same, but they all thrive through fear-based cultures. My hope is that good pastors and leaders will continue to perpetuate healthy church cultures that focus more on serving people than on serving unscrupulous leaders. We are thankful for the good pastors that are doing the work.
+Narcissism
+Accountability
