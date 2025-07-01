@@ -3,6 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jdrhyne.github.io',
+  site: 'https://hc-wine-five.vercel.app/',
   base: '/',
 });
