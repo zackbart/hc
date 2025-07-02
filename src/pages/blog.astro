@@ -12,9 +12,7 @@ const sortedPosts = allPosts
   <div class="blog-page">
     <header class="blog-header">
       <h1 class="blog-title">Blog</h1>
-      <p class="blog-description">
-        Exploring design, typography, and the intersection of historical aesthetics with modern functionality.
-      </p>
+      
       <hr class="blog-rule" />
     </header>
 
@@ -44,8 +42,8 @@ const sortedPosts = allPosts
               )}
             </div>
             
-            {post.frontmatter.excerpt && (
-              <p class="post-excerpt">{post.frontmatter.excerpt}</p>
+            {(post.frontmatter.description || post.frontmatter.excerpt) && (
+              <p class="post-description">{post.frontmatter.description || post.frontmatter.excerpt}</p>
             )}
             
             <a href={`${base}blog/${post.file.split('/').pop()?.replace('.md', '')}`} class="read-more">Read More →</a>
@@ -167,7 +165,7 @@ const sortedPosts = allPosts
     border-radius: 2px;
   }
 
-  .post-excerpt {
+  .post-description {
     color: var(--color-text-secondary);
     line-height: 1.6;
     margin-bottom: calc(var(--grid-unit) * 2);
