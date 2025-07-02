@@ -4,7 +4,7 @@ date: "2021-09-21"
 description: "The business of church can easily become a platform for personal gain, blurring the lines between ministry and opportunism. This article exposes the tricks and temptations that threaten the integrity of church leadership."
 excerpt: " "
 creator: "Yoel Bartolome"
-categories: [Money, Church Trends]
+categories: [Money, Church-Trends]
 link: "https://www.honestconversations.net/blog/tricks-of-the-church-trade-commodity-commercialize-capitalize"
 ---
 

@@ -5,7 +5,7 @@ description: "Founder's Syndrome grips churches when leaders cling to control an
 excerpt: " "
 creator: "Yoel Bartolome"
 categories: [Narcissism, Accountability]
-link: "https://www.honestconversations.net/blog/founder's-syndrome"
+link: "https://www.honestconversations.net/blog/founders-syndrome"
 ---
 
 Founder's syndrome is a common difficulty faced by organizations that have been shaped around the personality and beliefs of their original founder. It is characterized by "paternalistic, autocratic, and overzealous leadership, that makes it difficult for other stakeholders to get a grip on the organization." (Freeman, 2006) It is more common in churches than we might think. Understanding what Founder's Syndrome is will help explain what has become prevalent in many of our churches. In my opinion it is one of the main explanations for poor decisions and bad behavior on the part of many church planters. My hope is to bring a better understanding of why churches often start well but many end so poorly. Also, I hope to encourage leaders to correct this syndrome so we may maintain healthier churches with better ends in mind. Please see the list below to learn what Founder's Syndrome is and why this is a significant subject to understand and pray for.

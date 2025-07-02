@@ -1,7 +1,7 @@
 ---
 title: "Living in the Wake of a Narcissistic Leader"
 date: "2021-10-05"
-description: " "
+description: "Living in the wake of a narcissistic leader leaves deep emotional and spiritual scars, often hidden beneath the surface. This article explores the trauma, manipulation, and hard-won lessons from serving under toxic church leadership."
 excerpt: " "
 creator: "Yoel Bartolome"
 categories: [Narcissism]

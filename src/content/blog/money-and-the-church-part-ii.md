@@ -4,7 +4,7 @@ date: "2021-11-10"
 description: "Money in the church takes on the character of those who steward it, for better or worse. This follow-up dives into the hidden systems, staff dynamics, and manipulations that shape church finances and culture."
 excerpt: " "
 creator: "Yoel Bartolome"
-categories: [Money, Church Trends]
+categories: [Money, Church-Trends]
 link: "https://www.honestconversations.net/blog/money-and-the-church-part-ii"
 ---
 

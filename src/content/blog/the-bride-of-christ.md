@@ -4,7 +4,7 @@ date: "2021-11-17"
 description: "The Church is a diverse body called to holiness, yet often marred by pride and control. This article challenges leaders to repent, relinquish power, and pursue true spiritual renewal."
 excerpt: " "
 creator: "Yoel Bartolome"
-categories: [Accountability, Church Trends]
+categories: [Accountability, Church-Trends]
 link: "https://www.honestconversations.net/blog/the-bride-of-christ"
 ---
 

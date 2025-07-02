@@ -4,7 +4,7 @@ date: "2021-12-17"
 description: "Reverse-engineering church culture reveals how complexity and distraction have replaced the simple gospel. This article calls leaders to return to the basics, question their intentions, and keep faith authentic."
 excerpt: " "
 creator: "Yoel Bartolome"
-categories: [Church Trends]
+categories: [Church-Trends]
 link: "https://www.honestconversations.net/blog/keep-it-simple"
 ---
 

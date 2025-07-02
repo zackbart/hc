@@ -4,7 +4,7 @@ date: "2021-12-08"
 description: "Church trends often reveal deeper issues of loyalty, culture, and misplaced priorities. This piece challenges us to question the status quo and seek a faith rooted in truth, not just tradition."
 excerpt: " "
 creator: "Yoel Bartolome"
-categories: [Church Trends]
+categories: [Church-Trends]
 link: "https://www.honestconversations.net/blog/church-trends"
 ---
 
