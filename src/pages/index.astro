@@ -55,7 +55,7 @@ const getExcerpt = (post) => {
       <div class="container">
         <div class="newsletter-box">
           <h2 class="newsletter-title">Subscribe to the Honest Conversations Newsletter</h2>
-          <p class="newsletter-description">Get new articles, honest insights, and updates delivered straight to your inbox. No spam, ever.</p>
+          <p class="newsletter-description">Get new articles, honest insights, and updates delivered straight to your inbox.</p>
           <form action="https://example.us1.list-manage.com/subscribe/post?u=YOUR_U_ID&amp;id=YOUR_LIST_ID" method="post" target="_blank" novalidate class="newsletter-form">
             <input type="text" name="FNAME" class="newsletter-input" placeholder="Your name" required />
             <input type="email" name="EMAIL" class="newsletter-input" placeholder="Your email address" required />
@@ -490,14 +490,10 @@ const getExcerpt = (post) => {
       }
 
       .demo-category {
-        background-color: var(--color-text-primary);
-        color: white;
-        padding: calc(var(--grid-unit) / 4) calc(var(--grid-unit) / 2);
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        border-radius: 2px;
+        background-color: var(--color-surface);
+        color: var(--color-text-secondary);
+        font-weight: 500;
+        border: 1px solid var(--color-border);
       }
 
       .demo-actions {
