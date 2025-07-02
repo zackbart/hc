@@ -36,7 +36,9 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
             day: 'numeric'
           })}
         </time>
-        
+        {frontmatter.creator && (
+          <span class="post-author">By {frontmatter.creator}</span>
+        )}
         {frontmatter.categories && frontmatter.categories.length > 0 && (
           <div class="post-categories">
             {frontmatter.categories.map((category: string) => (
@@ -113,6 +115,13 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
     color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+  }
+
+  .post-author {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-left: 1em;
   }
 
   .post-categories {
