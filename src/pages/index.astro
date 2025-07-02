@@ -53,11 +53,24 @@ const getExcerpt = (post) => {
     <!-- Demo Section -->
     <section class="demo-section" id="demo">
       <div class="container">
-        <h2 class="section-title">Live Demo</h2>
-        <p class="demo-description">
-          See the theme in action with sample blog posts that demonstrate all typography, 
-          layout, and design elements working together in perfect dissonant harmony.
-        </p>
+        <div class="newsletter-box">
+          <h2 class="newsletter-title">Subscribe to the Honest Conversations Newsletter</h2>
+          <p class="newsletter-description">Get new articles, honest insights, and updates delivered straight to your inbox. No spam, ever.</p>
+          <form action="https://example.us1.list-manage.com/subscribe/post?u=YOUR_U_ID&amp;id=YOUR_LIST_ID" method="post" target="_blank" novalidate class="newsletter-form">
+            <input type="email" name="EMAIL" class="newsletter-input" placeholder="Your email address" required />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+        <div class="contact-box">
+          <h2 class="contact-title">Send Us a Message</h2>
+          <p class="contact-description">Have a question, story, or feedback? Reach out and we'll get back to you soon.</p>
+          <form class="contact-form" autocomplete="off">
+            <input type="text" name="name" class="contact-input" placeholder="Your name" required />
+            <input type="email" name="email" class="contact-input" placeholder="Your email address" required />
+            <textarea name="message" class="contact-textarea" placeholder="Your message" rows="4" required></textarea>
+            <button type="submit" class="contact-btn">Send Message</button>
+          </form>
+        </div>
         
         {sortedPosts.length > 0 && (
           <div class="demo-posts">
@@ -583,6 +596,150 @@ const getExcerpt = (post) => {
         line-height: 1.6;
         margin-bottom: calc(var(--grid-unit) * 2);
         font-size: 1.1rem;
+      }
+
+      .hero-logo {
+        display: block;
+        margin: 0 auto calc(var(--grid-unit) * 4);
+        width: 800px;
+        height: 80px;
+        max-width: 95vw;
+      }
+      @media (max-width: 768px) {
+        .hero-logo {
+          width: 98vw;
+          height: auto;
+        }
+      }
+
+      .newsletter-box {
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        padding: calc(var(--grid-unit) * 3);
+        width: 100%;
+        margin: 0 auto calc(var(--grid-unit) * 4);
+        text-align: center;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+      .newsletter-box:hover {
+        transform: translateY(-2px);
+        border-color: var(--color-accent);
+      }
+      .newsletter-title {
+        font-family: var(--font-heading-secondary);
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--color-accent);
+        margin-bottom: calc(var(--grid-unit) * 2);
+      }
+      .newsletter-description {
+        color: var(--color-text-secondary);
+        font-size: 1.1rem;
+        margin-bottom: calc(var(--grid-unit) * 3);
+      }
+      .newsletter-form {
+        display: flex;
+        gap: calc(var(--grid-unit));
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .newsletter-input {
+        font-family: var(--font-body);
+        font-size: 1.1rem;
+        padding: calc(var(--grid-unit) * 1.2) calc(var(--grid-unit) * 2);
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        outline: none;
+        min-width: 220px;
+        max-width: 100%;
+      }
+      .newsletter-btn {
+        font-family: var(--font-heading-secondary);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: calc(var(--grid-unit) * 1.2) calc(var(--grid-unit) * 2);
+        border-radius: 4px;
+        background-color: var(--color-accent);
+        color: white;
+        border: 2px solid var(--color-accent);
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+      }
+      .newsletter-btn:hover,
+      .newsletter-btn:focus {
+        background: transparent;
+        color: var(--color-accent);
+      }
+
+      .contact-box {
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        padding: calc(var(--grid-unit) * 3);
+        width: 100%;
+        margin: 0 auto calc(var(--grid-unit) * 4);
+        text-align: center;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+      .contact-box:hover {
+        transform: translateY(-2px);
+        border-color: var(--color-accent);
+      }
+      .contact-title {
+        font-family: var(--font-heading-secondary);
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--color-accent);
+        margin-bottom: calc(var(--grid-unit) * 2);
+      }
+      .contact-description {
+        color: var(--color-text-secondary);
+        font-size: 1.1rem;
+        margin-bottom: calc(var(--grid-unit) * 3);
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--grid-unit) * 1.5);
+        align-items: center;
+      }
+      .contact-input,
+      .contact-textarea {
+        font-family: var(--font-body);
+        font-size: 1.1rem;
+        padding: calc(var(--grid-unit) * 1.2) calc(var(--grid-unit) * 2);
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        outline: none;
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+      }
+      .contact-textarea {
+        resize: vertical;
+        min-height: 100px;
+        max-width: 100%;
+      }
+      .contact-btn {
+        font-family: var(--font-heading-secondary);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: calc(var(--grid-unit) * 1.2) calc(var(--grid-unit) * 2);
+        border-radius: 4px;
+        background-color: var(--color-accent);
+        color: white;
+        border: 2px solid var(--color-accent);
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+        margin-top: calc(var(--grid-unit));
+      }
+      .contact-btn:hover,
+      .contact-btn:focus {
+        background: transparent;
+        color: var(--color-accent);
       }
     </style>
   </div>
