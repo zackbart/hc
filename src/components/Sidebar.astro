@@ -6,7 +6,7 @@ const base = import.meta.env.BASE_URL;
 const allPosts = await Astro.glob('../content/blog/*.md');
 const recentPosts = allPosts
   .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
-  .slice(0, 5);
+  .slice(0, 3);
 
 const categories = [...new Set(allPosts.flatMap(post => post.frontmatter.categories || []))];
 ---
@@ -59,22 +59,6 @@ const categories = [...new Set(allPosts.flatMap(post => post.frontmatter.categor
                 year: 'numeric'
               })}
             </time>
-          </li>
-        ))}
-      </ul>
-    </section>
-  )}
-
-  <!-- Categories Section -->
-  {categories.length > 0 && (
-    <section class="categories">
-      <h3 class="section-title">Categories</h3>
-      <ul class="category-list">
-        {categories.map(category => (
-          <li class="category-item">
-            <a href={`${base}categories/${category.toLowerCase()}`} class="category-link">
-              {category}
-            </a>
           </li>
         ))}
       </ul>
