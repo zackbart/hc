@@ -57,11 +57,11 @@ const getExcerpt = (post) => {
           <h2 class="newsletter-title">Subscribe to the Honest Conversations Newsletter</h2>
           <p class="newsletter-description">Get new articles, honest insights, and updates delivered straight to your inbox.</p>
           <form action="https://honestconversations.us5.list-manage.com/subscribe/post?u=0b2b7366c5e2c6c7ca4b44dff&amp;id=ef8675c1c8&amp;f_id=0017b8edf0" method="post" target="_blank" novalidate class="newsletter-form">
-            <div style="display: flex; gap: 1rem; width: 100%;">
+            <div class="newsletter-form-row">
               <input type="text" name="FNAME" class="newsletter-input" placeholder="First name" required style="flex:1;" />
               <input type="text" name="LNAME" class="newsletter-input" placeholder="Last name" required style="flex:1;" />
             </div>
-            <div style="display: flex; gap: 1rem; width: 100%; margin-top: 1rem;">
+            <div class="newsletter-form-row" style="margin-top: 1rem;">
               <input type="email" name="EMAIL" class="newsletter-input" placeholder="Your email address" required style="flex:3;" />
               <button type="submit" class="newsletter-btn" style="flex:1; min-width:120px;">Subscribe</button>
             </div>
@@ -663,6 +663,20 @@ const getExcerpt = (post) => {
       .newsletter-btn:focus {
         background: transparent;
         color: var(--color-accent);
+      }
+      .newsletter-form-row {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+      }
+      .newsletter-form-row > .newsletter-input {
+        min-width: 0;
+      }
+      @media (max-width: 600px) {
+        .newsletter-form-row {
+          flex-direction: column;
+          gap: 0.75rem;
+        }
       }
     </style>
   </div>

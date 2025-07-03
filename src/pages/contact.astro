@@ -14,7 +14,7 @@ import Layout from '../components/Layout.astro';
         <h2 class="contact-title">Send Us a Message</h2>
         <p class="contact-description">Have a question, story, or feedback? Reach out and we'll get back to you soon.</p>
         <form class="contact-form" autocomplete="off" action="https://formspree.io/f/xwpbzwkp" method="POST">
-          <div style="display: flex; gap: 1rem;">
+          <div class="contact-form-row">
             <input type="text" name="firstName" class="contact-input" placeholder="First name" required style="flex:1;" />
             <input type="text" name="lastName" class="contact-input" placeholder="Last name" required style="flex:1;" />
           </div>
@@ -136,6 +136,23 @@ import Layout from '../components/Layout.astro';
     display: flex;
     flex-direction: column;
     gap: calc(var(--grid-unit) * 2);
+  }
+
+  .contact-form-row {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .contact-form-row > .contact-input {
+    min-width: 0;
+  }
+
+  @media (max-width: 600px) {
+    .contact-form-row {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
   }
 
   .contact-input,
