@@ -25,7 +25,7 @@ export const config: SiteConfig = {
     avatar: "/avatar.jpg" // Correct path for Astro public assets
   },
   social: {
-    email: "yoel@monarch246.org"
+    email: "hi@honestconversations.net"
   },
   siteUrl: "https://honestconversations.net"
 };
