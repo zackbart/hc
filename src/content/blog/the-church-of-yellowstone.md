@@ -3,7 +3,6 @@ title: "The Church of Yellowstone"
 date: "2021-12-01"
 creator: "Yoel Bartolome"
 categories: [Accountability]
-link: "https://www.honestconversations.net/blog/the-church-of-yellowstone"
 description: "The Church of Yellowstone explores how loyalty to charismatic leaders can overshadow truth and justice. This piece draws parallels to pop culture and urges readers to seek genuine community and accountability."
 ---
 

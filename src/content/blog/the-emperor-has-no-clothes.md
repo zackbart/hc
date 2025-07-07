@@ -5,7 +5,6 @@ description: "When churches lack accountability, spiritual abuse and narcissism 
 excerpt: " "
 creator: "Yoel Bartolome"
 categories: [Narcissism]
-link: "https://www.honestconversations.net/blog/the-emperor-has-no-clothes"
 ---
 There is an old familiar story about an emperor who desired to be the very best dressed in his kingdom. Two men posing as weavers swindled him by offering him extravagant clothes they said would be invisible to those who were incompetent. Not wanting to admit that he himself couldn't see the clothes, he paraded himself naked in front everyone, not understanding that he had been deceived. When it comes to this story, many focus on the emperor but the real emphasis should be on how this was ever allowed to happen. From the beginning, my focus in telling our story has been to have an honest conversation about a culture found in churches that fosters both narcissistic behavior and tribalism that perpetuates spiritual abuse. If form determines function...what kind of form does the Church have that encourages these outcomes? And do we understand the Biblical definition of Church? In the next several weeks we want to talk about accountability and useful questions we should be asking.
 

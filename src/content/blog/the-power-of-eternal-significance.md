@@ -3,7 +3,6 @@ title: "The Power of Eternal Significance"
 date: "2021-09-14"
 creator: "Christy Bartolome"
 categories: [Narcissism, Accountability]
-link: "https://www.honestconversations.net/blog/the-power-of-eternal-significance"
 description: "The longing for eternal significance can be twisted by manipulative leaders into control and abuse. This article urges discernment and courage in the face of unhealthy church dynamics."
 ---
 

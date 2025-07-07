@@ -5,7 +5,6 @@ description: "Tribalism in the church breeds spiritual abuse, silences dissent, 
 excerpt: " "
 creator: "Yoel Bartolome"
 categories: [Church-Trends, Accountability]
-link: "https://www.honestconversations.net/blog/why-so-tribal"
 ---
 The Church could be described as a beautiful mosaic picture that when unified it creates a magnificent image of God's love for His people. Each mosaic piece is different and has a unique purpose. Together it creates a picture much different than each one could by itself. We are created by God as individuals to live in community with each other. So why is it so hard to have honest conversations? Why is it difficult to call something that is wrong….wrong? Is there a reason why we cannot admit when we need help or when something is not right? Unity does not require us to ignore or shun wrong behavior, unity exposes the wrong so there may be healing. When we come honestly to God and to each other to expose our faults, this is when He can sanctify, restore, and heal. Often topics like these within Christendom are met with hesitation. When churches go through these crises, they have a clear pattern of addressing it as gossip and labeling those who tell their story as wolves. They gaslight the situation by claiming these honest conversations are not done in love. Who determines this? Just because you do not love what is being said does not mean it's not done out of love. To answer the question, why is it so hard to have honest conversations…because we act tribal.
 

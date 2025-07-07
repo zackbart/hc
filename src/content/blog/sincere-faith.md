@@ -3,7 +3,6 @@ title: "Sincere Faith"
 date: "2022-01-19"
 creator: "Yoel Bartolome"
 categories: [Church-Trends, Accountability]
-link: "https://www.honestconversations.net/blog/sincere-faith"
 description: "Sincere faith means refusing to cover up cracks with wax—whether in pottery or in church culture. This article encourages honesty, integrity, and the courage to confront what's wrong for the sake of true faith."
 ---
 

@@ -3,7 +3,6 @@ title: "House Rules"
 date: "2022-01-26"
 creator: "Yoel Bartolome"
 categories: [Money, Accountability]
-link: "https://www.honestconversations.net/blog/house-rules"
 description: "Every church has its own house rules, but when these unwritten codes override God's standards, the results can be devastating. This article calls for honesty, accountability, and a return to true obedience."
 ---
 

@@ -5,7 +5,6 @@ description: "Money in the church takes on the character of those who steward it
 excerpt: " "
 creator: "Yoel Bartolome"
 categories: [Money, Church-Trends]
-link: "https://www.honestconversations.net/blog/money-and-the-church-part-ii"
 ---
 
 Money and the Church. When the world looks at Michelangelo's David, they see the masterful transformation of a large piece of marble that has been turned into a world-renowned sculpture. It would be ridiculous to assume that this transformation resulted solely from the tools that the artist used. Those same tools in the hands of anyone else would not have produced the same result. This 17-foot tall 12,000-pound block of marble took on the persona of the hand that sculped it. In the same way, money that has been given to church organizations take on the persona of those who steward it. In my last post, I asked the question: Why is there so much ambiguity around the subject of finances at local churches and denominations? The answer is simple, in some churches there is a curtain that hides improprieties, there are shadows that cover up the imperfections. It can become like a masquerade that participants attend in their costumes to evade transparency. To find out if this applies to your church you can and should ask these questions:

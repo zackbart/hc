@@ -39,7 +39,7 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
           })}
         </time>
         {frontmatter.creator && (
-          <span class="post-author">By {frontmatter.creator}</span>
+          <div class="post-author-below">{frontmatter.creator}</div>
         )}
         {frontmatter.categories && frontmatter.categories.length > 0 && (
           <div class="post-categories">
@@ -118,10 +118,21 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
   }
 
   .post-author {
+    /* Remove margin-left to prevent indentation */
     font-family: var(--font-mono);
     font-size: 0.9rem;
     color: var(--color-text-muted);
-    margin-left: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+  .post-author-below {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
   }
 
   .post-categories {

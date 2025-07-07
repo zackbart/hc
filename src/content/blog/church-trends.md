@@ -5,7 +5,6 @@ description: "Church trends often reveal deeper issues of loyalty, culture, and 
 excerpt: " "
 creator: "Yoel Bartolome"
 categories: [Church-Trends]
-link: "https://www.honestconversations.net/blog/church-trends"
 ---
 
 Today's Honest Conversation has to do with the topic of trends within the church. At first glance this idea of trends may seem trivial, but it can be a symptom of a real problem or issue. This is true with our health and so many things in nature. We have all had the experience of going over to someone else's house and realizing that not everyone lives the same way you do. Different people embrace all different kinds of foods, cultures, and trends. It can lead to an ah-ha moment that explains why you admire and respect your friends. Church leaders often embrace the current trends that most closely resemble the character and integrity of the organization they lead. They make a choice to either implement trends that can activate people to discipleship and growth in their relationship with God, or they invest in trends that facilitate abuse of power in the church. Sadly, in my experience the latter is the more prevalent approach.

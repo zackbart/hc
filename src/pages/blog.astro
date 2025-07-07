@@ -33,9 +33,11 @@ const sortedPosts = allPosts
                   day: 'numeric'
                 })}
               </time>
-              
+              {post.frontmatter.creator && (
+                <div class="post-creator-below">{post.frontmatter.creator}</div>
+              )}
               {post.frontmatter.categories && (
-                <div class="post-categories">
+                <div class="post-categories post-categories-below">
                   {post.frontmatter.categories.map((category) => (
                     <span class="category">{category}</span>
                   ))}
@@ -137,8 +139,25 @@ const sortedPosts = allPosts
   .post-meta {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--grid-unit));
+    gap: calc(var(--grid-unit) / 2);
     margin-bottom: calc(var(--grid-unit) * 2);
+  }
+
+  .post-creator-below {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+  }
+
+  .post-categories-below {
+    margin-top: 0.25em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--grid-unit) / 2);
   }
 
   .post-date {

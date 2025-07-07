@@ -5,7 +5,6 @@ description: "The Church is a diverse body called to holiness, yet often marred 
 excerpt: " "
 creator: "Yoel Bartolome"
 categories: [Accountability, Church-Trends]
-link: "https://www.honestconversations.net/blog/the-bride-of-christ"
 ---
 
 The Church is made up of people representing every tribe and nation. We who belong to the body of believers in Jesus Christ come from all different cultures, ethnicities, and languages. God created us in His image and our humanity was created especially so that we may be able to participate and commune with the Creator. *The Church* is not brick and mortar, but we do use church buildings and organizations to gather to celebrate the beauty of God's holiness. The greatest miracle of the Church is that we have a Father who loves us and has chosen us. We have been redeemed by God the Son because of the work of the Cross and the living proof of His resurrection. The Church is living out its mission based on our hope of Jesus returning for us. The miracle of the Holy Spirit is that He sanctifies us daily and is completing His work in us while we live in our mortal sinful bodies. And that is the hardest part of each person's journey! Today's honest conversation will discuss who the Church is and acknowledge its depravity so that we can begin to right past wrongs and move forward with God's anointing.
