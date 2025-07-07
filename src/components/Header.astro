@@ -268,6 +268,36 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     });
   }
   document.addEventListener('DOMContentLoaded', initDarkMode);
+
+  // --- Auto light/dark mode based on EST sunrise/sunset ---
+  function setThemeByESTSun() {
+    // Only run if user hasn't set a preference
+    if (localStorage.getItem('theme')) return;
+    // EST (America/New_York) sunrise/sunset times (approximate, adjust as needed)
+    // Example: 6:00 AM sunrise, 8:30 PM sunset (summer); 7:30 AM sunrise, 5:00 PM sunset (winter)
+    // For demo, use 6:30 AM and 8:00 PM
+    const now = new Date();
+    // Convert to EST
+    const estNow = new Date(now.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+    const month = estNow.getMonth() + 1;
+    let sunriseHour = 6, sunriseMin = 30, sunsetHour = 20, sunsetMin = 0;
+    // Simple seasonal adjustment (optional)
+    if (month <= 3 || month >= 11) { // winter
+      sunriseHour = 7; sunriseMin = 30; sunsetHour = 17; sunsetMin = 0;
+    } else if (month <= 5 || month >= 9) { // spring/fall
+      sunriseHour = 6; sunriseMin = 45; sunsetHour = 19; sunsetMin = 0;
+    }
+    const sunrise = new Date(estNow);
+    sunrise.setHours(sunriseHour, sunriseMin, 0, 0);
+    const sunset = new Date(estNow);
+    sunset.setHours(sunsetHour, sunsetMin, 0, 0);
+    if (estNow < sunrise || estNow > sunset) {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+  }
+  setThemeByESTSun();
 </script>
 
 <style>
@@ -311,16 +341,23 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     flex-shrink: 0;
   }
 
-  .search-toggle {
-    background: none;
-    border: none;
-    color: var(--color-text-primary);
-    padding: calc(var(--grid-unit) / 2);
-    cursor: pointer;
-    transition: color 0.2s ease;
+  .search-toggle,
+  .dark-mode-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    line-height: 1;
+    box-sizing: border-box;
+  }
+
+  .search-toggle svg,
+  .dark-mode-toggle svg {
+    width: 24px;
+    height: 24px;
+    display: block;
   }
 
   .search-toggle:hover,
@@ -570,7 +607,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
   .mobile-controls {
     display: flex;
     align-items: center;
-    gap: calc(var(--grid-unit) * 2);
+    gap: calc(var(--grid-unit) * 2.5); /* Increase gap for better spacing */
   }
 
   /* Hide mobile-only hamburger by default */
@@ -765,69 +802,24 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
       padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 2.5);
       margin: calc(var(--grid-unit) * -2) calc(var(--grid-unit) * -2.5) calc(var(--grid-unit) * 2) calc(var(--grid-unit) * -2.5);
     }
-    
-    .search-result-categories {
-      gap: calc(var(--grid-unit) * 2);
+
+    .nav-list {
+      flex-direction: column;
+      gap: calc(var(--grid-unit) * 1.5);
     }
-    
-    .search-category {
-      padding: calc(var(--grid-unit)) calc(var(--grid-unit) * 2);
+
+    .nav-link {
+      padding: calc(var(--grid-unit) * 1.5) calc(var(--grid-unit));
+      font-size: 1rem;
     }
-    
-    .search-result-title {
-      margin-bottom: calc(var(--grid-unit) * 2);
+
+    .rss-link {
+      padding: calc(var(--grid-unit) * 1.5) calc(var(--grid-unit));
     }
-    
-    .search-result-date {
-      margin-bottom: calc(var(--grid-unit) * 3);
-    }
-    
-    .search-result-excerpt {
-      margin-bottom: calc(var(--grid-unit) * 4);
-    }
-    
-    /* Adjust GitHub button for mobile */
+
     .github-star-button {
-      padding: calc(var(--grid-unit) * 0.75);
-      border-width: 1px;
+      padding: calc(var(--grid-unit) * 0.5) calc(var(--grid-unit) * 1.5);
+      font-size: 0.8125rem;
     }
-    
-    .github-star-text {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    /* Even smaller mobile adjustments */
-    .mobile-controls {
-      gap: calc(var(--grid-unit)) !important;
-    }
-    
-    .github-star-button,
-    .rss-toggle,
-    .search-toggle {
-      padding: calc(var(--grid-unit) * 0.5);
-    }
-  }
-
-  .dark-mode-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin-left: 1rem;
-    color: var(--color-accent);
-    transition: color 0.2s;
-  }
-  .dark-mode-toggle:focus {
-    outline: 2px solid var(--color-accent);
-  }
-
-  .dark-mode-toggle svg {
-    display: block;
-    stroke: var(--color-accent);
-    width: 1.5em;
-    height: 1.5em;
-    background: none;
   }
 </style>
