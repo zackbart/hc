@@ -17,11 +17,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     
     <div class="site-title">
       <a href={base}>
-        <picture>
-          <source srcset={base + "site-title-dark.svg"} media="(prefers-color-scheme: dark)" type="image/svg+xml" />
-          <source srcset={base + "site-title-light.svg"} media="(prefers-color-scheme: light)" type="image/svg+xml" />
-          <img src={base + "site-title-light.svg"} alt={config.title} class="title-svg" />
-        </picture>
+        <img src={base + "site-title-light.svg"} alt={config.title} class="title-svg" />
       </a>
     </div>
     
@@ -811,4 +807,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     
     .search-results-header {
       padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 2.5);
-      margin: calc(var(--grid-unit) * -2) calc(var(--grid-unit) * -2.5) calc(var(--grid-unit) * 2) calc(var(--grid-unit)
+      margin: calc(var(--grid-unit) * -2) calc(var(--grid-unit) * -2.5) calc(var(--grid-unit) * 2) calc(var(--grid-unit) * -2.5);
+    }
+  }
+</style>
