@@ -9,7 +9,9 @@ const { largeAvatar = false } = Astro.props;
 
 const base = import.meta.env.BASE_URL;
 
-const allPosts = await Astro.glob('../content/blog/*.md');
+// Use import.meta.glob to get all blog posts
+const postImporters = import.meta.glob('../content/blog/*.md', { eager: true });
+const allPosts = Object.values(postImporters);
 const recentPosts = allPosts
   .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
   .slice(0, 3);

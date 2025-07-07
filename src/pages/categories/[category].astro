@@ -2,7 +2,8 @@
 import Layout from '../../components/Layout.astro';
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob('../../content/blog/*.md');
+  const postImporters = import.meta.glob('../../content/blog/*.md', { eager: true });
+  const allPosts = Object.values(postImporters);
   
   // Extract all unique categories
   const allCategories = new Set();

@@ -2,7 +2,8 @@
 import Layout from '../../components/Layout.astro';
 
 export async function getStaticPaths() {
-  const posts = await Astro.glob('../../content/blog/*.md');
+  const postImporters = import.meta.glob('../../content/blog/*.md', { eager: true });
+  const posts = Object.values(postImporters);
   
   return posts.map(post => ({
     params: { slug: post.file.split('/').pop()?.replace('.md', '') },
