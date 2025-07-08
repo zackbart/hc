@@ -37,6 +37,7 @@
     "@fontsource/roboto-condensed": "^5.2.6",
     "@fontsource/work-sans": "^5.2.6",
     "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "astro": "^5.9.1"
   },
   "devDependencies": {
