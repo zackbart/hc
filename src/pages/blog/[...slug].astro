@@ -48,12 +48,12 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
             ))}
           </div>
         )}
-        {frontmatter.audio !== false && (
+        {/*frontmatter.audio !== false && (
           <audio class="post-audio" controls>
             <source src={`/audio/${Astro.props.post.file.split('/').pop()?.replace('.md', '.mp3')}`} type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
-        )}
+        )*/}
       </div>
       
       {frontmatter.excerpt && (
